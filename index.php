@@ -32,22 +32,13 @@
           Account
         </a>
         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-light" href="#">Login</a>
+          <a class="dropdown-item text-light" href="login.php">Login</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-light" href="#">Register</a>
+          <a class="dropdown-item text-light" href="register.php">Register</a>
         </div>
       </li>
     </ul>
   </div>
-
-<!--   <ul class="navbar-nav">
-  	<li class="navbar-item">
-        <a class="nav-link" href="#"><button class="btn btn-dark login">Login</button></a>
-     </li>
-     <li class="navbar-item">
-        <a class="nav-link" href="#"><button class="btn btn-dark login">Register</button></a>
-     </li>
-   </ul> -->
 	</nav>
 
 </body>
