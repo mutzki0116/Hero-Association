@@ -1,5 +1,5 @@
 <?php 
-	include_once './includes/config.php';
+	include_once './_includes/config.php';
 
 if(isset($_POST['submitbutton'])){
 		$user = $_POST['username'];
@@ -79,11 +79,10 @@ if(isset($_POST['submitbutton'])){
   <span onclick="document.getElementById('loginModal').style.display='none'"
 class="close" title="Close Modal">&times;</span>
 
-  <form class="modal-content animate loginModal" action="#">
+  <form class="modal-content animate loginModal" action="index.php">
     <div class="imgcontainer">
       <img src="_images/ha-logo.png" alt="Avatar" class="Avatar">
     </div>
-
     <div class="container">
       <div class="container1">
       <input type="text" placeholder="Enter Username" name="username" required>
