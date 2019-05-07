@@ -33,22 +33,19 @@
         </a>
         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
           <a class="dropdown-item text-light" href="#" onclick="document.getElementById('loginModal').style.display='block'">Login</a>
-          <a class="dropdown-item text-light" href="#" onclick="document.getElementById('registrationModal').style.display='block'">Register</a>
+          <a class="dropdown-item text-light" href="register.php">Register</a>
         </div>
       </li>
   </div>
   </nav>
 
-
-<!-- LoginForm Modal -->
-
 <div id="loginModal" class="modal">
   <span onclick="document.getElementById('loginModal').style.display='none'"
 class="close" title="Close Modal">&times;</span>
 
-  <form class="modal-content animate loginModal" action="/action_page.php">
+  <form class="modal-content animate" action="/action_page.php">
     <div class="imgcontainer">
-      <img src="_images/ha-logo.png" alt="Avatar" class="Avatar">
+      <img src="_images/ha-logo.png" alt="Avatar" class="loginAvatar">
     </div>
 
     <div class="container">
@@ -62,33 +59,6 @@ class="close" title="Close Modal">&times;</span>
   </form>
 </div> 
 
-
-<!-- RegistrationForm Modal -->
-
-<div id="registrationModal" class="modal">
-  <span onclick="document.getElementById('registrationModal').style.display='none'"
-class="close" title="Close Modal">&times;</span>
-
-  <form class="modal-content animate regModal" action="/action_page.php">
-    <div class="imgcontainer">
-      <img src="_images/ha-logo.png" alt="Avatar" class="Avatar">
-    </div>
-
-    <div class="container">
-      <div class="container1">
-      <input type="text" placeholder="Username" name="username" required>
-      <input type="password" placeholder="Password" name="password" required>
-      <input type="password" placeholder="Firstname" name="fname" required>
-      <input type="password" placeholder="Lastname" name="lname" required>
-      <input type="text" placeholder="Extension" name="extension" required>
-      <input type="text" placeholder="Style" name="style" required>
-      <input type="text" placeholder="City" name="city" required>
-      <input class="chooseImg" type="file" name="image" required>
-      <button type="submit" class="btn btn-secondary registerBtn">Register</button>
-      </div>
-    </div>
-  </form>
-</div> 
 
 </body>
 </html>

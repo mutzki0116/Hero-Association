@@ -18,3 +18,75 @@ body {
 .dropdown-menu {
 	text-align: center;
 }
+.Avatar {	
+	width: 75px;
+	height: 75px;
+	margin: 5%;
+}
+.loginBtn {
+	border: 1px solid white;
+	float: right;
+	background-color: transparent;
+	margin: 10%;
+}
+.registerBtn {
+	border: 1px solid white;
+	float: right;
+	background-color: transparent;
+	margin: 5% 10%;
+}
+#loginModal input[type="text"],#loginModal input[type="password"] {
+	border: none;
+	background-color: transparent;
+	border-bottom: 2px solid white;
+	color: white;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+}
+#registrationModal input[type="text"],#registrationModal input[type="password"] {
+	border: none;
+	background-color: transparent;
+	border-bottom: 2px solid white;
+	color: white;
+	width: 40%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+}
+.modal { 
+	margin-top: 5%;
+	text-align: center;
+	display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 25%;
+    top: 0;
+    width: 50%;
+    overflow: auto;
+}
+.modal-content {
+	padding-top: 5%;
+  	background-color: rgba(52,58,64,0.7);
+  	margin: 5px auto;
+	border: 2px solid grey;
+  	width: 100%;
+  	height: 85%;
+}
+.chooseImg {
+	margin-top: 5%;
+	display: block;
+	padding-left: 10%;
+	color: white;
+}
+.close {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 1;
+  cursor: pointer;
+}
