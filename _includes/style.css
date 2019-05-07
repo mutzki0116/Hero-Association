@@ -1,0 +1,20 @@
+body {
+	background: url('../_images/ha-logo-hd.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+.navbar-brand {
+	padding-left: 5%;
+}
+.nav-item {
+	padding: 0 5%;
+}
+.login {
+	border: 1px solid grey;
+	display: inline;
+}
+.dropdown-menu {
+	text-align: center;
+}
