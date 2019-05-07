@@ -27,7 +27,7 @@ if(isset($_POST['submitbutton'])){
 		else{
 			header("Location: index.php?WizardUnidentified");
 		}
-		// endforeach;
+		endforeach;
 	}	
 	
 ?>
