@@ -1,3 +1,36 @@
+<?php 
+	include_once './includes/config.php';
+
+if(isset($_POST['submitbutton'])){
+		$user = $_POST['username'];
+		$pass = $_POST['password'];
+		$heroQuery = "SELECT * FROM heroUP WHERE hero_username = :username && hero_password = :password ";
+		
+		$data = selectHeroes($heroQuery, [
+			['hero' => ':username', 'value' => $user],
+			['hero' => ':password', 'value' => $pass],
+		]);
+
+		foreach ($data as $heroInfo): 
+		if($data > 0){
+			if($heroInfo['hero_role'] == 'hero'){
+			session_start();
+			$_SESSION['heroID'] = $heroInfo['hero_user_id'];
+			header("Location: index2.php?");
+			}
+			elseif ($heroInfo['role'] == 'admin') {
+			session_start();
+			$_SESSION['heroID'] = $heroInfo['hero_user_id'];
+			header("Location: homepage.php?");
+			}
+		}
+		else{
+			header("Location: index.php?WizardUnidentified");
+		}
+		// endforeach;
+	}	
+	
+?>
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="_includes/bootstrap.css">
@@ -56,7 +89,7 @@ class="close" title="Close Modal">&times;</span>
       <input type="text" placeholder="Enter Username" name="username" required>
       <input type="password" placeholder="Enter Password" name="password" required>
 
-      <button type="submit" class="btn btn-secondary loginBtn">Login</button>
+      <button type="submit" class="btn btn-secondary loginBtn" name="submitbutton">Login</button>
       </div>
     </div>
   </form>
@@ -78,8 +111,8 @@ class="close" title="Close Modal">&times;</span>
       <div class="container1">
       <input type="text" placeholder="Username" name="username" required>
       <input type="password" placeholder="Password" name="password" required>
-      <input type="password" placeholder="Firstname" name="fname" required>
-      <input type="password" placeholder="Lastname" name="lname" required>
+      <input type="text" placeholder="Firstname" name="fname" required>
+      <input type="text" placeholder="Lastname" name="lname" required>
       <input type="text" placeholder="Extension" name="extension" required>
       <input type="text" placeholder="Style" name="style" required>
       <input type="text" placeholder="City" name="city" required>
