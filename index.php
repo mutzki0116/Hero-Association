@@ -18,7 +18,7 @@ if(isset($_POST['submitbutton'])){
 			$_SESSION['heroID'] = $heroInfo['hero_user_id'];
 			header("Location: index2.php?");
 			}
-			elseif ($heroInfo['role'] == 'admin') {
+			elseif ($heroInfo['hero_role'] == 'admin') {
 			session_start();
 			$_SESSION['heroID'] = $heroInfo['hero_user_id'];
 			header("Location: homepage.php?");
