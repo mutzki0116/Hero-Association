@@ -1,3 +1,36 @@
+<?php  
+	include_once './includes/config.php';
+		if(isset($_POST['submitbutton'])){
+		$user = $_POST['userName'];
+		$pass = $_POST['passWord'];
+		$heroQuery = "SELECT * FROM wizardrecords WHERE username = :username && password = :password ";
+		
+		$data = selectHeroes($heroQuery, [
+			['name' => ':username', 'value' => $user],
+			['name' => ':password', 'value' => $pass],
+		]);
+
+		foreach ($data as $wizInfo): 
+		if($data > 0){
+			if($wizInfo['role'] == 'user'){
+			session_start();
+			$_SESSION['wizId'] = $wizInfo['wizard_id'];
+			header("Location: index2.php?");
+			}
+			elseif ($wizInfo['role'] == 'admin') {
+			session_start();
+			$_SESSION['wizId'] = $wizInfo['wizard_id'];
+			header("Location: viewwizards.php?");
+			}
+		}
+		else{
+			header("Location: index.php?WizardUnidentified");
+		}
+		// endforeach;
+	}	
+
+
+?>
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="_includes/bootstrap.css">
