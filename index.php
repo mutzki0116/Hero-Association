@@ -79,7 +79,7 @@ if(isset($_POST['submitbutton'])){
   <span onclick="document.getElementById('loginModal').style.display='none'"
 class="close" title="Close Modal">&times;</span>
 
-  <form class="modal-content animate loginModal" action="/action_page.php">
+  <form class="modal-content animate loginModal" action="#">
     <div class="imgcontainer">
       <img src="_images/ha-logo.png" alt="Avatar" class="Avatar">
     </div>
