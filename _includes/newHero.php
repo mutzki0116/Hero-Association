@@ -32,7 +32,9 @@
 		// $heroResult1->bindParam(':role', $role);
 		// $heroResult1->bindParam(':status', $status);
 		// $heroResult1->execute(['user'=>$huser,'pass'=>$hpass,'role'=>$role,'status'=>$status]);
-		header("Location: ../index.php?newHeroAdded");
+		header("Location: ../index2.php?newHeroAdded");
+		session_start();
+	
 	}
 		
 	} catch (Exception $e) {
