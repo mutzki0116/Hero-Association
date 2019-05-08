@@ -116,7 +116,7 @@ class="close" title="Close Modal">&times;</span>
       <input type="text" placeholder="Style" name="style" required>
       <input type="text" placeholder="City" name="city" required>
       <input class="chooseImg" type="file" name="image" required>
-      <button type="submit" class="btn btn-secondary registerBtn">Register</button>
+      <button type="submit" class="btn btn-secondary registerBtn" name="submitbutton">Register</button>
       </div>
     </div>
   </form>
