@@ -1,6 +1,6 @@
 <?php 
 	include_once './_includes/config.php';
-
+	session_start();
  ?>
 <!DOCTYPE html>
 <html>
