@@ -101,7 +101,7 @@ class="close" title="Close Modal">&times;</span>
   <span onclick="document.getElementById('registrationModal').style.display='none'"
 class="close" title="Close Modal">&times;</span>
 
-  <form class="modal-content animate regModal" action="/_includes/newHero.php">
+  <form class="modal-content animate regModal" method="POST" action="/_includes/newHero.php">
     <div class="imgcontainer">
       <img src="_images/ha-logo.png" alt="Avatar" class="Avatar">
     </div>
