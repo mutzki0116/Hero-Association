@@ -6,7 +6,7 @@
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$huser = $_POST['username'];
 		$hpass = $_POST['password'];
-		$role = 'user';
+		$role = 'hero';
 		$hfname = $_POST['fname'];
 		$hlname = $_POST['lname'];
 		$hextension = $_POST['extension'];
