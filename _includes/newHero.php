@@ -1,6 +1,8 @@
 <?php
 	include_once './includes/config.php';
 
+	try {
+		
 	if(isset($_POST['submitbutton'])){
 		$huser = $_POST['username'];
 		$hpass = $_POST['password'];
@@ -33,5 +35,9 @@
 		$heroResult1->bindParam(':status', $status);
 		$heroResult1->execute(['user'=>$huser,'pass'=>$hpass,'role'=>$role,'status'=>$status]);
 		header("Location: index.php?newHeroAdded");
+	}
+		
+	} catch (Exception $e) {
+		
 	}
 ?> 
