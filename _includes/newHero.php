@@ -25,13 +25,13 @@
     	$heroResult->bindParam(':heroimg', $himage);
 		$heroResult->execute();
 		
-		$heroQuery1 = "INSERT INTO heroUP(hero_username, hero_password, hero_role, status) VALUES(:username, :password, :role, :status);";	
-		$pdo = getConnection();
-		$heroResult1->bindParam(':user', $huser);
-		$heroResult1->bindParam(':pass', $hpass);
-		$heroResult1->bindParam(':role', $role);
-		$heroResult1->bindParam(':status', $status);
-		$heroResult1->execute(['user'=>$huser,'pass'=>$hpass,'role'=>$role,'status'=>$status]);
+		// $heroQuery1 = "INSERT INTO heroUP(hero_username, hero_password, hero_role, status) VALUES(:username, :password, :role, :status);";	
+		// $pdo = getConnection();
+		// $heroResult1->bindParam(':user', $huser);
+		// $heroResult1->bindParam(':pass', $hpass);
+		// $heroResult1->bindParam(':role', $role);
+		// $heroResult1->bindParam(':status', $status);
+		// $heroResult1->execute(['user'=>$huser,'pass'=>$hpass,'role'=>$role,'status'=>$status]);
 		header("Location: ../index2.php?newHeroAdded");
 		session_start();
 	
