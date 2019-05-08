@@ -90,3 +90,29 @@ body {
   z-index: 1;
   cursor: pointer;
 }
+
+/* heroProfile.php */
+
+.profile {
+	margin: 3% auto;
+	padding: 2%; 
+	font-family: Impact;
+	border: 1px solid #fff;
+	width: 100%;
+	color: #fff;
+	border-radius: 10px;
+	height: 500px;
+  	background-color: rgba(52,58,64,0.7);
+}
+.heroAvatar {
+	float: left;
+	width: 20%;
+	height: 200px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	margin-right: 5%;
+}
+.heroInfo {
+	float: right;
+	width: 75%;
+}
