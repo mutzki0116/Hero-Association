@@ -1,5 +1,5 @@
 <?php
-	include_once './_includes/config.php';
+	include_once 'config.php';
 
 	try {
 		
