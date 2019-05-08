@@ -1,13 +1,7 @@
 <?php 
-	include_once './_includes/config.php';
-
- ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<?php echo $heroInfo['hero_user_id']; ?>
+	include_once 'homepageHeader.php';
+	echo $heroInfo['hero_user_id']; 
+?>
+<h1>Homepage</h1>
 </body>
 </html>
