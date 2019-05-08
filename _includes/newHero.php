@@ -14,15 +14,20 @@
 		$hcity = $_POST['city'];
 		$himage = $_POST['image'];
 		$status = 'inactive';
-		$heroQuery = "INSERT INTO heroProfiles(hero_firstname, hero_lastname, hero_ext_name, hero_city, hero_fighting_style,hero_img) VALUES(:fname, :lname, :ext, :city, :fstyle, :heroimg);";	
+		$heroQuery = "INSERT INTO heroProfiles(hero_username,hero_password,hero_role,hero_firstname, hero_lastname, hero_ext_name, hero_city, hero_fighting_style,hero_img, status) VALUES(:user, :pass, :role, :fname, :lname, :ext, :city, :fstyle, :heroimg, :status);";	
 		$pdo = getConnection();
 		$heroResult = $pdo->prepare($heroQuery);
+
+    	$heroResult->bindParam(':user', $huser);
+    	$heroResult->bindParam(':pass', $hpass);
+    	$heroResult->bindParam(':role', $role);
     	$heroResult->bindParam(':fname', $hfname);
     	$heroResult->bindParam(':lname', $hlname);
     	$heroResult->bindParam(':ext', $hextension);
     	$heroResult->bindParam(':city', $hcity);	
 		$heroResult->bindParam(':fstyle', $hstyle);
     	$heroResult->bindParam(':heroimg', $himage);
+    	$heroResult->bindParam(':status', $status);
 		$heroResult->execute();
 		
 		// $heroQuery1 = "INSERT INTO heroUP(hero_username, hero_password, hero_role, status) VALUES(:username, :password, :role, :status);";	
