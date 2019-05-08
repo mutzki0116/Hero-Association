@@ -3,7 +3,7 @@
 
 	try {
 		
-	if(isset($_POST['submitbutton'])){
+	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$huser = $_POST['username'];
 		$hpass = $_POST['password'];
 		$role = 'user';
