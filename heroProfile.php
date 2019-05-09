@@ -14,7 +14,7 @@
 			foreach ($data as $heroInfo):
 			?>
 
-			<h3 class="heroName">Fullname: <?php echo $heroInfo['hero_firstname'], " ",echo $heroInfo['hero_lastname'];  ?></h3>
+			<h3 class="heroName">Fullname: <?php echo $heroInfo['hero_firstname']; ?></h3>
 			<h3>Hero Name: <?php echo $heroInfo['hero_username']; ?></h3>
 			<h3>Class: <?php echo $heroInfo['hero_class']; ?></h3>
 			<h3>Rank: <?php echo $heroInfo['hero_rank_no']; ?></h3>
