@@ -3,7 +3,7 @@
 	include_once './_includes/config.php';
 
 	$classc = 'c';
-	$heroQuery = "SELECT * FROM heroRankings;";
+	$heroQuery = "SELECT hero_rank_no,hero_firstname FROM heroRankings INNER JOIN heroProfiles ON heroRankings.hero_user_id = heroProfiles.hero_user_id;";
 	$data = selectRanking($heroQuery);
 
 ?>
@@ -18,7 +18,7 @@ foreach ($data as $heroInfo):
 			<?php echo $heroInfo['hero_rank_no']; ?>
 		</td>
 		<td>
-			<?php echo $heroInfo['hero_class']; ?>
+			<?php echo $heroInfo['hero_firstname']; ?>
 		</td>
 	</tr>
 
