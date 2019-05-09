@@ -8,8 +8,24 @@
 
 ?>
 <h1>Rankings</h1>
-<?php print_r($data); ?>
-	
+<?php 
+foreach ($data as $heroInfo):
+?>
+
+<table>
+	<tr>
+		<td>
+			<?php echo $heroInfo['hero_rank_no']; ?>
+		</td>
+		<td>
+			<?php echo $heroInfo['hero_class']; ?>
+		</td>
+	</tr>
+
+</table>
+	<?php 
+		endforeach;
+	?>
 
 </body>
 </html>
