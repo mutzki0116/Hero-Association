@@ -3,7 +3,7 @@
 	include_once './_includes/config.php';
 
 	$classc = 'c';
-	$heroQuery = "SELECT * FROM heroRankings WHERE hero_class;";
+	$heroQuery = "SELECT * FROM heroRankings;";
 	$data = selectRanking($heroQuery);
 
 ?>
