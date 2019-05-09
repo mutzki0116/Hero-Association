@@ -7,9 +7,11 @@
 	$heroResult = $pdo->prepare($heroQuery);
 	$heroResult->execute();
 	$data = selectHeroes();
-	print_r($data);
+
 ?>
 <h1>Rankings</h1>
-
+<?php 
+	print_r($data);
+?>
 </body>
 </html>
