@@ -16,7 +16,7 @@ foreach ($data as $heroInfo):
 	<tr>
 		<td>
 			<?php echo $heroInfo['hero_rank_no']; ?>
-		</td>
+		</td><br>
 		<td>
 			<?php echo $heroInfo['hero_firstname']; ?>
 		</td>
