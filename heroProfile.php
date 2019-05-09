@@ -2,9 +2,16 @@
 	include_once 'homepageHeader.php';
 	include_once './_includes/config.php';
 	session_start();
-	$hero_id = $_SESSION['heroID'];
-	$heroQuery = "SELECT hero_rank_no,hero_class, hero_firstname,hero_lastname,hero_fighting_style,hero_city,hero_username FROM heroRankings INNER JOIN heroProfiles ON heroRankings.hero_user_id = heroProfiles.hero_user_id WHERE heroRankings.hero_user_id = '".$hero_id."';";
-	$data = selectRanking($heroQuery);
+	
+		if(isset($_SESSION['heroID'])){
+			$hero_id = $_SESSION['heroID'];
+			$heroQuery = "SELECT hero_rank_no,hero_class, hero_firstname,hero_lastname,hero_fighting_style,hero_city,hero_username FROM heroRankings INNER JOIN heroProfiles ON heroRankings.hero_user_id = heroProfiles.hero_user_id WHERE heroRankings.hero_user_id = '".$hero_id."';";
+			$data = selectRanking($heroQuery);
+		}
+		else{
+			echo "No user is set";
+		}
+
 ?>
 <div class="container">
 	<div class="profile">
