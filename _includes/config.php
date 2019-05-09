@@ -18,11 +18,11 @@
 		}
 		return $stmt->fetchAll();
 	}
-	function selectRanking($heroQuery, $params = []){
+	function selectRanking($heroQuery){
 		$pdo = getConnection();
 		$stmt = $pdo->prepare($heroQuery);
-		
-			if(isset($params)) {
+
+				if(isset($params)) {
 				
 				foreach ($params as $param) {
 					$parameter = (object) $param;
@@ -30,7 +30,11 @@
 				} 	
 				$stmt->execute();
 			}
-			return $stmt->fetchAll();
+			else{
+				echo "No data";
+			}
+		return $stmt->fetchAll();
+	}
 	}
 
 ?>
