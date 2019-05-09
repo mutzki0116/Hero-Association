@@ -1,7 +1,7 @@
 <?php  
 	include_once 'homepageHeader.php';
 	include_once './_includes/config.php';
-
+	session_start();
 	$classc = 'c';
 	$heroQuery = "SELECT hero_rank_no,hero_firstname FROM heroRankings INNER JOIN heroProfiles ON heroRankings.hero_user_id = heroProfiles.hero_user_id;";
 	$data = selectRanking($heroQuery);

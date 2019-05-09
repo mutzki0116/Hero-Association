@@ -4,6 +4,6 @@
 	$id = $_SESSION['heroID'];
 ?>
 <h1>Homepage</h1>
-	<h2><?php echo $id; ?></h2>
+	<h2><?php echo $_SESSION['heroID']; ?></h2>
 </body>
 </html>

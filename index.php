@@ -1,6 +1,6 @@
 <?php 
 	include_once './_includes/config.php';
-
+  session_start();
 if(isset($_POST['submitbutton'])){
 		$user = $_POST['username'];
 		$pass = $_POST['password'];
