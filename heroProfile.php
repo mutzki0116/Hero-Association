@@ -28,6 +28,7 @@
 			<h3>City: <?php echo $heroInfo['hero_city']; ?></h3>
 			<h3>Fighting Style: <?php echo $heroInfo['hero_fighting_style']; ?></h3>
 		</div>
+	<?php endforeach; ?>
 	</div>
 </div>
 </body>
