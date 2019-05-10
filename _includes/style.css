@@ -143,3 +143,22 @@ body {
 .monsterContainer a {
 	font-weight: bold;
 }
+
+/* createTask.php && addMonster.php */
+.createTask {
+	position: absolute;
+	width: 80%;
+	top: 15%;
+	border: 1px solid white;
+	border-radius: 5px;
+  	background-color: rgba(52,58,64,0.7);
+  	color: white;
+  	padding: 2% 5%;
+}
+.createTask input[type='submit'] {
+	float: right;
+	margin: 2% auto;
+}
+.createTask select, .createTask h2 {
+	margin-bottom: 10px;
+}

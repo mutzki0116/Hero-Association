@@ -27,7 +27,7 @@
           Monsters
         </a>
         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-light" href="#">Add</a>
+          <a class="dropdown-item text-light" href="addMonster.php">Add</a>
           <a class="dropdown-item text-light" href="monsters.php">View</a>
         </div>
       </li>
@@ -36,7 +36,7 @@
           Task
         </a>
         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-light" href="#">Create</a>
+          <a class="dropdown-item text-light" href="createTask.php">Create</a>
           <a class="dropdown-item text-light" href="#">Send</a>
         </div>
       </li>
