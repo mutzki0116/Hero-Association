@@ -10,22 +10,22 @@
 <!-- Gumamit ng looping para idisplay lahat ng monsters na nasa database -->
 <!-- Ilagay sa loob ng _images/monsters -->
 
-
+<?php foreach ($data as $monsterInfo):  ?>
 <!-- Sample -->
 <div class="container">
 	<div class="row">	
-		<?php foreach ($data as $monsterInfo):  ?>
-		<div class="col-xl-4 col-md-6">
+		<?php echo '<div class="col-xl-4 col-md-6">
 			<div class="card monsterContainer">
-			  <?php echo '<img class="card-img-top monster-img" src="data:image/jpeg;base64,'.base64_encode( $monsterInfo['monster_image'] ).'"/>'; ?>
+			<img class="card-img-top monster-img" src="data:image/jpeg;base64,'.base64_encode( $monsterInfo['monster_image'] ).'"/>
 			  	<div class="card-body">
-				    <h2 class="card-title"><?php echo $monsterInfo['monster_name']; ?></h2>
-				    <p class="card-text"><?php echo $monsterInfo['monster_description']; ?></p>
+				    <h2 class="card-title"> '.$monsterInfo['monster_name'].' </h2>
+				    <p class="card-text"> '.$monsterInfo['monster_description'].' </p>
 				    <hr>
 				    <a href="#">READ LESS</a>
 			  	</div>
 			</div>
-		</div>
+		</div>'; ?>
+		
 	</div>
 </div>
 <?php endforeach; ?>
