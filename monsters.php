@@ -1,12 +1,16 @@
 <?php 
 	include_once 'adminHeader.php';
+	include_once './_includes/config.php';
+
+	$monsterQuery = "SELECT * FROM monsterList;";
+	$data = selectMonsters($monsterQuery);
 ?>
 <h1 class="pageTitle">Monster Gallery</h1>
 
 <!-- Gumamit ng looping para idisplay lahat ng monsters na nasa database -->
 <!-- Ilagay sa loob ng _images/monsters -->
 
-
+<?php print_r($data); ?>
 <!-- Sample -->
 <div class="container">
 	<div class="row">
