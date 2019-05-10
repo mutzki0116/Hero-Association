@@ -32,4 +32,17 @@
 		return $stmt->fetchAll();
 
 	}
+	function addMonsters($monsterQuery, $params = []){
+		$pdo = getConnection();
+		$stmt = $pdo->prepare($monsterQuery);
+			if(isset($params)) {
+			
+				foreach ($params as $param) {
+					$parameter = (object) $param;
+					$stmt->bindParam($parameter->monster, $parameter->value, PDO::PARAM_STR);	
+				} 	
+				$stmt->execute();
+			}
+		return $stmt->fetchAll();
+	}
 ?>

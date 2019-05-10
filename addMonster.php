@@ -1,5 +1,25 @@
 <?php  
 	include_once 'adminHeader.php';
+	include_once './_includes/config.php';
+		if (isset($_POST['addMonster'])) {
+			
+			$mname = $_POST['monster_name'];				
+			$mdesc = $_POST['monster_desc'];
+			$mimg = $_POST['monster_img'];
+			$mthreat = $_POST['monster_threat'];
+			$mstatus = $_POST['monster_status'];
+
+			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image,monster_threat_lvl, monster_status) VALUES(:mname, :mdesc, :mimg, :mthreat, :mstatus);";
+			
+			$data = addMonsters($wizQuery, [
+			['monster' => ':mname', 'value' => $mname],
+			['monster' => ':mdesc', 'value' => $mdesc],
+			['monster' => ':mimg', 'value' => $user],
+			['monster' => ':mthreat', 'value' => $mthreat],
+			['monster' => ':mstatus', 'value' => $mstatus],
+		]);
+		}
+	
 ?>
 <div class="container">
 	<form method="post" action="#" class="createTask">
@@ -9,7 +29,7 @@
 
 		<div class="col-xl-4">
 			<label>Threat Level </label>
-			<select class="form-control">
+			<select class="form-control" name="monster_threat">
 				<option>God</option>
 				<option>Dragon</option>
 				<option>Demon</option>
@@ -18,7 +38,7 @@
 		</div>
 			<div class="col-xl-4">
 			<label>Monster Status</label>
-			<select class="form-control">
+			<select class="form-control" name="monster_status">
 				<option>Alive</option>
 				<option>Dead</option>
 			</select>
@@ -26,17 +46,17 @@
 
 		<div class="col-xl-8">
 		<label>Monster Image </label>
-		<input type="file" name="" class="form-control">
+		<input type="file" name="monster_img" class="form-control">
 			
 		</div>
 		</div>
 			<label>Monster Name</label>
 			<div class="form-group">
-			<input type="text" name="" class="form-control" placeholder="Monster Name">
+			<input type="text" name="monster_name" class="form-control" placeholder="Monster Name">
 		</div>
 			<label>Monster Description </label>
-			<textarea class="form-control" rows="5" placeholder="Description"></textarea>
-			<input type="submit" name="addMonster" class="btn btn-outline-secondary addMonsterBtn" value="Submit">
+			<textarea class="form-control" rows="5" placeholder="Description" name="monster_desc" required=""></textarea>
+			<input type="submit" name="addMonster" class="btn btn-outline-primary addMonsterBtn" value="Submit">
 
 	</div>
 </form>
