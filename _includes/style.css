@@ -140,3 +140,6 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.monsterContainer a {
+	font-weight: bold;
+}
