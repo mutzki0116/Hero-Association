@@ -10,10 +10,11 @@
 <!-- Gumamit ng looping para idisplay lahat ng monsters na nasa database -->
 <!-- Ilagay sa loob ng _images/monsters -->
 
-<?php foreach ($data as $monsterInfo):  ?>
+
 <!-- Sample -->
 <div class="container">
 	<div class="row">	
+		<?php foreach ($data as $monsterInfo):  ?>
 		<div class="col-xl-4 col-md-6">
 			<div class="card monsterContainer">
 			  <?php echo '<img class="card-img-top monster-img" src="data:image/jpeg;base64,'.base64_encode( $monsterInfo['monster_image'] ).'"/>'; ?>
