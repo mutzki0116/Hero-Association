@@ -10,16 +10,17 @@
 <!-- Gumamit ng looping para idisplay lahat ng monsters na nasa database -->
 <!-- Ilagay sa loob ng _images/monsters -->
 
-<?php print_r($data); ?>
+<?php foreach ($data as $monsterInfo):  ?>
 <!-- Sample -->
 <div class="container">
 	<div class="row">
 		<div class="col-xl-4 col-md-6">
 			<div class="card monsterContainer">
-			  <img class="card-img-top monster-img" src="_images/monsters/boros.png">
+			  <img class="card-img-top monster-img" value="<?php echo $monsterInfo['monster_image']; ?>
+			  ">
 			  	<div class="card-body">
-				    <h2 class="card-title">Boros</h2>
-				    <p class="card-text">Boros (ボロス, Borosu), also called Lord Boros (ボロス主, Borosu-nushi) by his subordinates, is the leader of the Dark Matter Thieves</p>
+				    <h2 class="card-title"><?php echo $monsterInfo['monster_name']; ?></h2>
+				    <p class="card-text"><?php echo $monsterInfo['monster_description']; ?></p>
 				    <a href="#" class="btn btn-primary">View</a>
 			  	</div>
 			</div>
