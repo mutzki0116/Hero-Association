@@ -15,7 +15,14 @@
 				<option>Demon</option>
 				<option>Tiger</option>
 			</select>
-			</div>
+		</div>
+			<div class="col-xl-4">
+			<label>Monster Status</label>
+			<select class="form-control">
+				<option>Alive</option>
+				<option>Dead</option>
+			</select>
+		</div>
 
 		<div class="col-xl-8">
 		<label>Monster Image </label>
