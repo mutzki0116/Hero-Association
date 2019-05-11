@@ -28,14 +28,8 @@
       <li class="nav-item">
         <a class="nav-link" href="heroRankings.php">Rankings</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Task
-        </a>
-        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-light" href="#">Ongoing</a>
-          <a class="dropdown-item text-light" href="#">Finished</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" href="tasks.php">Task</a>
       </li>
   </div>
   </nav>
