@@ -1,5 +1,4 @@
 <?php  
-	session_start();
 	include_once 'adminHeader.php';
 		if (isset($_POST['addMonster'])) {
 			
@@ -11,7 +10,7 @@
 
 			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image,monster_threat_lvl, monster_status) VALUES(:mname, :mdesc, :mimg, :mthreat, :mstatus);";
 			
-			$data = addMonsters($wizQuery, [
+			$data = addMonsters($monsterQuery, [
 			['monster' => ':mname', 'value' => $mname],
 			['monster' => ':mdesc', 'value' => $mdesc],
 			['monster' => ':mimg', 'value' => $user],
@@ -22,7 +21,7 @@
 	
 ?>
 <div class="container">
-	<form method="post" action="#" class="createTask">
+	<form method="post" action="#" class="createTask" enctype="multipart/form-data">
 	<div class="form-group">
 	<h2>Add a Monster</h2>
 	<div class="row">
