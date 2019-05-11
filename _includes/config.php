@@ -1,6 +1,6 @@
 <?php 
 	function getConnection(){
-		$pdoConn = new PDO("mysql:host=localhost;dbname=makata16","escanor0116","database");
+		$pdoConn = new PDO("mysql:host=localhost;dbname=makata16","root","");
 		$pdoConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $pdoConn;
 	}
@@ -45,7 +45,7 @@
 	}
 	function selectTasks($taskQuery, $params = []){
 		$pdo = getConnection();
-		$stmt = $pdo->prepare($monsterQuery);
+		$stmt = $pdo->prepare($taskQuery);
 		if (isset($params)) {
 			foreach ($params as $param) {
 					$parameter = (object) $param;
@@ -53,6 +53,5 @@
 				} 	
 				$stmt->execute();
 		}
-		return $stmt->fetchAll();
 	}
 ?>

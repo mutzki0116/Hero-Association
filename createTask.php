@@ -6,11 +6,12 @@
 			$taskcity = $_POST['city'];
 			$taskmonster = $_POST['monster_name'];
 			$taskdesc = $_POST['task_desc'];
-			$taskstatus = $_POST['monster_status'];
+			// $_POST['stats'] = 'Ongoing';
+			$taskstatus = $_POST['stats'];
 
-		$taskQuery = "INSERT INTO hero_tasks(task_threat_level,task_city, task_monster, task_description, task_status) VALUES(:tasklvl, ,:taskcity, :taskmonster, :taskdesc, :taskstatus)";
+		$taskQuery = "INSERT INTO hero_tasks(task_threat_level,task_city, task_monster, task_description, task_status) VALUES(:tasklvl, :taskcity, :taskmonster, :taskdesc, :taskstatus);";
 		
-		$data = selectTasks($taskQuery[
+		$data = selectTasks($taskQuery,[
 			['task' => ':tasklvl', 'value' => $tasklevel],
 			['task' => ':taskcity', 'value' => $taskcity],
 			['task' => ':taskmonster', 'value' => $taskmonster],
@@ -68,6 +69,7 @@
 			<!-- Galing sa database -->
 			<!-- sample -->
 					<div class="col-xl-4">
+						<input type="text" name="stats" value="Ongoing" style="display: none">
 						<label>Monster</label>
 						<select class="form-control" name="monster_name">
 							<option>Boros</option>
@@ -76,12 +78,12 @@
 							<option>Garou</option>
 						</select>
 					</div>
-			</div>
+				</div>
 				<label>Task Description </label>
 				<textarea class="form-control" rows="5" placeholder="Description" name="task_desc"></textarea>
 				<input type="submit" name="submitbutton" class="btn btn-outline-secondary createTaskBtn" value="Submit">	
+				</div>
+			</form>
 		</div>
-	</form>
-</div>
-</body>
+	</body>
 </html>
