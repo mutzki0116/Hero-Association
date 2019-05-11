@@ -1,7 +1,23 @@
 <?php  
 	include_once 'adminHeader.php';
-	include_once './_includes/config.php';
+	if(isset($_POST['submitbutton'])){
 
+			$tasklevel = $_POST['tasklevel'];				
+			$taskcity = $_POST['city'];
+			$taskmonster = $_POST['monster_name'];
+			$taskdesc = $_POST['task_desc'];
+			$taskstatus = $_POST['monster_status'];
+
+		$taskQuery = "INSERT INTO hero_tasks(task_threat_level,task_city, task_monster, task_description, task_status) VALUES(:tasklvl, ,:taskcity, :taskmonster, :taskdesc, :taskstatus)";
+		
+		$data = selectTasks($taskQuery[
+			['task' => ':tasklvl', 'value' => $tasklevel],
+			['task' => ':taskcity', 'value' => $taskcity],
+			['task' => ':taskmonster', 'value' => $taskmonster],
+			['task' => ':taskdesc', 'value' => $taskdesc],
+			['task' => ':taskstatus', 'value' => $taskstatus],
+	]);
+			}
 
 ?>
 <div class="container">
