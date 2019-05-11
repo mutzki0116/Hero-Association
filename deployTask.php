@@ -20,7 +20,7 @@
 			</div>
 
 
-		<div class="col-xl-4">
+		<div class="col-xl-8">
 			<label>Task</label>
 			<select class="form-control">
 				<option>Kill</option>

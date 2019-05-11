@@ -144,7 +144,7 @@ body {
 	font-weight: bold;
 }
 
-/* createTask.php && addMonster.php */
+/* createTask.php && addMonster.php && deployTask.php */
 .createTask {
 	position: absolute;
 	width: 80%;
@@ -162,7 +162,6 @@ body {
 .createTask select, .createTask h2 {
 	margin-bottom: 10px;
 }
-
 /* homepage */
 
 .announcement {
