@@ -2,7 +2,7 @@
 	include_once 'adminHeader.php';
 	include_once './_includes/config.php';
 
-	if(isset($_POST['createTask'])){
+	if(isset($_POST['submitbutton'])){
 
 			$tasklevel = $_POST['tasklevel'];				
 			$taskcity = $_POST['city'];
@@ -83,7 +83,7 @@
 			</div>
 				<label>Task Description </label>
 				<textarea class="form-control" rows="5" placeholder="Description" name="task_desc"></textarea>
-				<input type="submit" name="createTask" class="btn btn-outline-secondary createTaskBtn" value="Submit">	
+				<input type="submit" name="submitbutton" class="btn btn-outline-secondary createTaskBtn" value="Submit">	
 		</div>
 	</form>
 </div>
