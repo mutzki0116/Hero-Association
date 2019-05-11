@@ -1,4 +1,5 @@
 <?php  
+	session_start();
 	include_once 'adminHeader.php';
 		if (isset($_POST['addMonster'])) {
 			
