@@ -11,7 +11,6 @@
 <?php 
 foreach ($data as $heroInfo):
 ?>
-
 <table>
 	<tr>
 		<td>
