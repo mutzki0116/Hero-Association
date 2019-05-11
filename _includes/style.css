@@ -162,3 +162,13 @@ body {
 .createTask select, .createTask h2 {
 	margin-bottom: 10px;
 }
+
+/* homepage */
+
+.announcement {
+	position: absolute;
+	left: 10%;
+	padding: 0 auto;
+	width: 80%;
+	right: 10%;
+}
