@@ -19,7 +19,7 @@
 		$heroResult = $pdo->prepare($heroQuery);
 
     	$heroResult->bindParam(':user', $huser);
-    	$heroResult->bindParam(':pass', $hpass);
+    	$heroResult->bindParam(':pass', $hpass);j
     	$heroResult->bindParam(':role', $role);
     	$heroResult->bindParam(':fname', $hfname);
     	$heroResult->bindParam(':lname', $hlname);
