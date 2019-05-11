@@ -22,6 +22,12 @@
       <li class="nav-item active">
         <a class="nav-link" href="adminHomepage.php">Home</a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="threatLevels.php">Threats</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="announcements.php">Announcements</a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Monsters
@@ -37,16 +43,7 @@
         </a>
         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
           <a class="dropdown-item text-light" href="createTask.php">Create</a>
-          <a class="dropdown-item text-light" href="deployTask.php">Send</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Threat
-        </a>
-        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-light" href="threatLevels.php">Levels</a>
-          <a class="dropdown-item text-light" href="#">Announcements</a>
+          <a class="dropdown-item text-light" href="deployTask.php">Deploy</a>
         </div>
       </li>
 
