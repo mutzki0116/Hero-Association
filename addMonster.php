@@ -7,7 +7,7 @@
 			$mimg = $_POST['monster_img'];
 			$mthreat = $_POST['monster_threat'];
 			$mstatus = $_POST['monster_status'];
-			$monsterQuery = "INSERT INTO monsterlist(monster_name, monster_description, monster_image,monster_threat_lvl, monster_status) VALUES(:mname, :mdesc, :mimg, :mthreat, :mstatus);";
+			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image,monster_threat_lvl, monster_status) VALUES(:mname, :mdesc, :mimg, :mthreat, :mstatus);";
 			$pdo = getConnection();
 			$monsterQuery = $pdo->prepare($monsterQuery);
 	    	$monsterQuery->bindParam(':mname', $mname);
