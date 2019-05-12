@@ -24,7 +24,7 @@
 		$stmt->execute();
 		return $stmt->fetchAll();
 	}
-	function selectMonsters($monsterQuery, $params = []){
+	function selectMonsters($monsterQuery){
 		$pdo = getConnection();
 		$stmt = $pdo->prepare($monsterQuery);
 		$stmt->bindParam($monsterQuery);
