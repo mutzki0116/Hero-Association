@@ -49,13 +49,13 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="index.php">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Heroes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Monsters</a>
+        <a class="nav-link" href="monsters.php">Monsters</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Memes</a>

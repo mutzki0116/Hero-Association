@@ -33,6 +33,8 @@ if(isset($_POST['submitbutton'])){
 ?>
 <!DOCTYPE html>
 <html>
+
+
 <link rel="stylesheet" type="text/css" href="_includes/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="_includes/style.css">
 <script src="_includes/jquery-3.4.0.js"></script>
@@ -40,7 +42,7 @@ if(isset($_POST['submitbutton'])){
 <head>
   <title>The Hero Association</title>
 </head>
-<body>
+<body onload="playIntro()">
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <a class="navbar-brand" href="index.php"><img src="_images/ha-logo.png" width="40" height="40" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,16 +51,13 @@ if(isset($_POST['submitbutton'])){
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Heroes</a>
+        <a class="nav-link" href="#Heroes">Heroes</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Monsters</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Memes</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -121,6 +120,90 @@ class="close" title="Close Modal">&times;</span>
     </div>
   </form>
 </div> 
+
+<div>
+    <video id="opening" playsinline controls>
+   <source src="op.mp4" type="video/mp4">
+</video>
+</div>
+<section class="heroes">
+  <a name="Heroes"></a>
+  <div class="container">
+  <h2>Heroes</h2>
+  <p>Heroes (ヒーロー, Hīrō) are individuals who fight for justice against all evils in the world. They also protect innocent civilians from any harm against natural disasters, Mysterious Beings, Villains, and other threats. Most heroes are registered with the Hero Association and are divided into four classes: From lowest to highest, there's C-Class, B-Class, A-Class and S-Class, each having their own individual numbered rankings within the class. However, the Rank 1 heroes of A-Class and B-Class are substantially more powerful than the bottom-ranked hero of S-Class and A-Class respectively; they chose to keep their Rank 1 position in their current class as a gatekeeper, or for reasons of their own. </p>
+  <div class="row"> 
+
+    <div class="col-lg-3">
+      <div class="card">
+        <div class="card text-center">
+          <div class="card-header">S-Class</div>
+            <div class="card-body">
+              <h5 class="card-title">S級</h5>
+              <p class="card-text">The highest and strongest class in the Hero Association. Here are listed the most powerful heroes. This class were capable of defeating disaster level Demon Mysterious Beings on their own.</p>
+              <hr>
+              <a href="https://onepunchman.fandom.com/wiki/Heroes">READ MORE</a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+      <div class="card">
+        <div class="card text-center">
+          <div class="card-header">A-Class</div>
+            <div class="card-body">
+              <h5 class="card-title">A級</h5>
+              <p class="card-text">The second strongest class out of the four classes. When a hero reaches Rank 1 in B-Class, they can climb up to A-Class. Heroes in this class are considered very powerful and are often the most popular</p>
+              <hr>
+              <a href="https://onepunchman.fandom.com/wiki/Heroes">READ MORE</a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="col-lg-3">
+      <div class="card">
+        <div class="card text-center">
+          <div class="card-header">B-Class</div>
+            <div class="card-body">
+              <h5 class="card-title">B級</h5>
+              <p class="card-text">The third strongest class out of the four classes. When a hero reaches Rank 1 in C-Class, they can climb up to B-Class. Heroes in this class do not have to perform weekly heroic acts to fulfill any quotas.</p>
+              <hr>
+              <a href="https://onepunchman.fandom.com/wiki/Heroes">READ MORE</a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="col-lg-3">
+      <div class="card">
+        <div class="card text-center">
+          <div class="card-header">C-Class</div>
+            <div class="card-body">
+              <h5 class="card-title">C級</h5>
+              <p class="card-text">The lowest and least strong class out of the four classes. Although C-Class heroes are the weakest, their strength exceeds that of an average person. When a hero enters the association, they normally begin here.</p>
+              <hr>
+              <a href="https://onepunchman.fandom.com/wiki/Heroes">READ MORE</a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</section>
+</main>
+
+
+
+<script type="text/javascript">
+var vids = document.getElementById("opening");
+function playIntro(){
+  vids.muted = true;
+  document.getElementById('opening').play();
+}
+</script>
 
 </body>
 </html>
