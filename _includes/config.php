@@ -9,7 +9,6 @@
 		$stmt = $pdo->prepare($heroQuery);
 
 		if(isset($params)) {
-			
 			foreach ($params as $param) {
 				$parameter = (object) $param;
 				$stmt->bindParam($parameter->hero, $parameter->value, PDO::PARAM_STR);	
