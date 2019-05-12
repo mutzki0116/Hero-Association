@@ -14,7 +14,7 @@
 		$hcity = $_POST['city'];
 		$himage = $_POST['image'];
 		$status = 'inactive';
-		$heroQuery = "INSERT INTO heroprofile(hero_username,hero_password,hero_role,hero_firstname, hero_lastname, hero_ext_name, hero_city, hero_fighting_style,hero_img, status) VALUES(:user, :pass, :role, :fname, :lname, :ext, :city, :fstyle, :heroimg, :status);";	
+		$heroQuery = "INSERT INTO heroProfiles(hero_username,hero_password,hero_role,hero_firstname, hero_lastname, hero_ext_name, hero_city, hero_fighting_style,hero_img, status) VALUES(:user, :pass, :role, :fname, :lname, :ext, :city, :fstyle, :heroimg, :status);";	
 		$pdo = getConnection();
 		$heroResult = $pdo->prepare($heroQuery);
 
