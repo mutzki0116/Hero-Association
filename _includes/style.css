@@ -96,6 +96,27 @@ body {
   cursor: pointer;
 }
 
+#opening {
+	width: 100%;
+	margin-bottom: 5%;
+}
+.heroes {
+	text-align: center;
+	color: white;
+}
+
+.heroes h2 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 20px auto;
+}
+.heroes .card {
+	color: black;
+	margin-bottom: 20px;
+}
+.heroes .card-text {
+    white-space: normal;
+}
 /* heroProfile.php */
 
 .profile {
