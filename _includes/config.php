@@ -41,7 +41,6 @@
 				} 	
 				$stmt->execute();
 			}
-		return $stmt->fetchAll();
 	}
 	function selectTasks($taskQuery, $params = []){
 		$pdo = getConnection();
