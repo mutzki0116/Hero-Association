@@ -15,9 +15,9 @@
 	    	$monsterQuery->bindParam(':mimg', $mimg);
 	    	$monsterQuery->bindParam(':mthreat', $mthreat);
 	    	$monsterQuery->bindParam(':mstatus', $mstatus);
-			$heroResult->execute();
+			$monsterQuery->execute();
 			
-			header("Location: ../addMonster.php?newMonsterAdded");
+			header("Location: ../HA/addMonster.php?newMonsterAdded");
 			session_start();
 		}
 	
