@@ -43,7 +43,7 @@
         </a>
         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
           <a class="dropdown-item text-light" href="createTask.php">Create</a>
-          <a class="dropdown-item text-light" href="deployTask.php">Deploy</a>
+          <a class="dropdown-item text-light" href="deploy.php">Deploy</a>
         </div>
       </li>
 
