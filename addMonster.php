@@ -1,5 +1,6 @@
 <?php  
 	include_once 'adminHeader.php';
+	include_once './_includes/config.php';
 	try {
 		if (isset($_POST['addMonster'])) {
 			$mname = $_POST['name'];
