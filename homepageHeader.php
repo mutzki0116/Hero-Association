@@ -1,6 +1,11 @@
 <?php
  	include_once './_includes/config.php';
 	session_start();
+
+  if(isset($_POST['logout'])){
+    session_destroy();
+    header("Location: index.php");
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,4 +37,8 @@
         <a class="nav-link" href="tasks.php">Task</a>
       </li>
   </div>
+  
+  <form method="post" action="#">
+    <input type="submit" name="logout" value="Logout" class="btn btn-outline-secondary">
+  </form>
   </nav>
