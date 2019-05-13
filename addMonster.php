@@ -24,7 +24,7 @@
 	}
 ?>
 <div class="container">
-	<form method="post" action="#" class="createTask">
+	<form method="post" action="" class="createTask">
 	<div class="form-group">
 	<h2>Add a Monster</h2>
 	<div class="row">
