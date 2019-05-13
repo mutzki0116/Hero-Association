@@ -6,9 +6,9 @@
 			$mname = $_POST['name'];
 			$mdesc = $_POST['desc'];
 			$mthreat = $_POST['threat'];
-			$mimg = $_FILES['img'];
+			$mimg = $_POST['img'];
 			$mstatus = $_POST['stats'];
-			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_level, moster_status) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus);";
+			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_lvl, moster_status) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus);";
 			$pdo = getConnection();
 			$monsterResult = $pdo->prepare($monsterQuery);
 			$monsterResult->bindParam(':mname',$mname);
