@@ -1,30 +1,31 @@
 <?php  
 	include_once 'adminHeader.php';
 	include_once './_includes/config.php';
-
-	if (isset($_POST['addMonster'])) {
-		$mname = $_POST['name'];
-		$mdesc = $_POST['desc'];
-		$mthreat = $_POST['threat'];
-		$mimg = $_FILES['img'];
-		$mstatus = $_POST['stats'];
-		$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_level, moster_status) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus);";
-		$pdo = getConnection();
-		$monsterResult = $pdo->prepare($monsterQuery);
-		$monsterResult->bindParam(':mname',$mname);
-		$monsterResult->bindParam(':mdesc',$mdesc);
-		$monsterResult->bindParam(':mimg',$mimg);
-		$monsterResult->bindParam(':mthreat',$mthreat);
-		$monsterResult->bindParam(':mstatus',$mstatus);
-		$monsterResult->execute();
-		header("Location: ../monster.php");
+	try {
+		if (isset($_POST['addMonster'])) {
+			$mname = $_POST['name'];
+			$mdesc = $_POST['desc'];
+			$mthreat = $_POST['threat'];
+			$mimg = $_FILES['img'];
+			$mstatus = $_POST['stats'];
+			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_level, moster_status) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus);";
+			$pdo = getConnection();
+			$monsterResult = $pdo->prepare($monsterQuery);
+			$monsterResult->bindParam(':mname',$mname);
+			$monsterResult->bindParam(':mdesc',$mdesc);
+			$monsterResult->bindParam(':mimg',$mimg);
+			$monsterResult->bindParam(':mthreat',$mthreat);
+			$monsterResult->bindParam(':mstatus',$mstatus);
+			$monsterResult->execute();
+			header("Location: ../monster.php");
+		}
+	} catch (Exception $e) {
+		var_dump($e);	
 	}
-	else{
-		echo "Bat wala!!!";
-	}
+	
 ?>
 <div class="container">
-	<form method="post" action="" class="createTask">
+	<form method="post" action="#" class="createTask">
 	<div class="form-group">
 	<h2>Add a Monster</h2>
 	<div class="row">
