@@ -9,7 +9,7 @@
 			$mimg = $_POST['img'];
 			$mstatus = $_POST['stats'];
 			$date = $_POST['date_added'];
-			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_lvl, moster_status,date_added) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus,:date_added;";
+			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_lvl, moster_status,date_added) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus,:date_added);";
 			$data = addMonsters($monsterQuery, [
 			['monster' => ':mname', 'value' => $mname],
 			['monster' => ':mdesc', 'value' => $mdesc],
@@ -19,7 +19,7 @@
 			['monster' => ':mstatus', 'value' => $mstatus],
 			['monster' => ':date_added', 'value' => $date],
 			]);
-			header("Location: monster.php");
+			header("Location: monsters.php");
 		}
 	} catch (Exception $e) {
 		var_dump($e);	
