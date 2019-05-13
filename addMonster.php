@@ -1,28 +1,6 @@
 <?php  
 	include_once 'adminHeader.php';
-		if ($_SERVER['REQUEST_METHOD'] == 'POST')) {
-			
-			$mname = $_POST['monster_name'];				
-			$mdesc = $_POST['monster_desc'];
-			$mimg = $_POST['monster_img'];
-			$mthreat = $_POST['monster_threat'];
-			$mstatus = $_POST['monster_status'];
-			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image,monster_threat_lvl, monster_status) VALUES(:mname, :mdesc, :mimg, :mthreat, :mstatus);";
-			$pdo = getConnection();
-			$monsterQuery = $pdo->prepare($monsterQuery);
-	    	$monsterQuery->bindParam(':mname', $mname);
-	    	$monsterQuery->bindParam(':mdesc', $mdesc);
-	    	$monsterQuery->bindParam(':mimg', $mimg);
-	    	$monsterQuery->bindParam(':mthreat', $mthreat);
-	    	$monsterQuery->bindParam(':mstatus', $mstatus);
-			$monsterQuery->execute();
-			
-			header("Location: ../HA/addMonster.php?newMonsterAdded");
-			session_start();
-		}
-		else{
-			echo"Undefined Error";
-		}
+
 ?>
 <div class="container">
 	<form method="post" action="#" class="createTask">
