@@ -1,10 +1,9 @@
 <?php  
 	include_once 'adminHeader.php';
-	include_once './_includes/config.php';
 	try {
 		if (isset($_POST['addMonster'])) {
 			$mname = $_POST['name'];
-			$mdesc = $_POST['desc'];
+			$mdesc = $_POS	T['desc'];
 			$mthreat = $_POST['threat'];
 			$mimg = $_POST['img'];
 			$mstatus = $_POST['stats'];
