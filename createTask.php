@@ -3,7 +3,7 @@
 	
 	if(isset($_SESSION['heroID'])) {
 			$monsterQuery = "SELECT * FROM monsterList;";
-			$data = selectMonsters($monsterQuery);
+			$data2 = selectMonsters($monsterQuery);
 
 	}
 	if(isset($_POST['submitbutton'])){
@@ -78,7 +78,7 @@
 						<input type="text" name="stats" value="Ongoingg" style="display: none">
 						<label>Monster</label>
 						<select class="form-control" name="monster_name">
-							<?php foreach ($data as $monstername): ?>
+							<?php foreach ($data2 as $monstername): ?>
 							<option><?php echo $monstername['monster_name']; ?></option>
 							<?php endforeach ?>
 						</select>
