@@ -8,7 +8,7 @@
 			$mthreat = $_POST['threat'];
 			$mimg = $_POST['img'];
 			$mstatus = $_POST['stats'];
-			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_lvl, moster_status,date_added) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus,NOW());";
+			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_lvl, moster_status,date_added) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus,UNIX_TIMESTAMP());";
 			$data = addMonsters($monsterQuery, [
 			['monster' => ':mname', 'value' => $mname],
 			['monster' => ':mdesc', 'value' => $mdesc],
@@ -56,6 +56,7 @@
 			<div class="form-group">
 			<input type="text" name="name" class="form-control" placeholder="Monster Name">
 		</div>
+		<input type="text" name="datee" value="<?php UNIX_TIMESTAMP(); ?>">
 			<label>Monster Description </label>
 			<textarea class="form-control" rows="5" placeholder="Description" name="desc" required></textarea>
 			<input type="submit" name="addMonster" class="btn btn-outline-primary addMonsterBtn" value="Submit">
