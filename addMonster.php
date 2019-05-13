@@ -8,7 +8,8 @@
 			$mthreat = $_POST['threat'];
 			$mimg = $_POST['img'];
 			$mstatus = $_POST['stats'];
-			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_lvl, moster_status,date_added) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus,UNIX_TIMESTAMP());";
+			$date = $_POST['date_added'];
+			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_lvl, moster_status,date_added) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus,:date_added;";
 			$data = addMonsters($monsterQuery, [
 			['monster' => ':mname', 'value' => $mname],
 			['monster' => ':mdesc', 'value' => $mdesc],
@@ -16,6 +17,7 @@
 			['monster' => ':mthreat', 'value' => $mthreat],
 			['monster' => ':mstatus', 'value' => $mstatus],
 			['monster' => ':mstatus', 'value' => $mstatus],
+			['monster' => ':date_added', 'value' => $date],
 			]);
 			header("Location: monster.php");
 		}
@@ -56,7 +58,10 @@
 			<div class="form-group">
 			<input type="text" name="name" class="form-control" placeholder="Monster Name">
 		</div>
-		<input type="text" name="datee" value="<?php UNIX_TIMESTAMP(); ?>">
+		<?php 
+		$date = date("Y-m-d H:i:s");
+		echo '<input type="text" name="date_added" value="'.$date.'">';
+		?>
 			<label>Monster Description </label>
 			<textarea class="form-control" rows="5" placeholder="Description" name="desc" required></textarea>
 			<input type="submit" name="addMonster" class="btn btn-outline-primary addMonsterBtn" value="Submit">
