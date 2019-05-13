@@ -8,14 +8,13 @@
 			$mimg = $_POST['img'];
 			$mstatus = $_POST['stats'];
 			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_lvl, moster_status) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus);";
-			$pdo = getConnection();
-			$monsterResult = $pdo->prepare($monsterQuery);
-			$monsterResult->bindParam(':mname',$mname);
-			$monsterResult->bindParam(':mdesc',$mdesc);
-			$monsterResult->bindParam(':mimg',$mimg);
-			$monsterResult->bindParam(':mthreat',$mthreat);
-			$monsterResult->bindParam(':mstatus',$mstatus);
-			$monsterResult->execute();
+			$data = addMonster($monsterQuery, [
+			['monster' => ':mname', 'value' => $mname],
+			['monster' => ':mdesc', 'value' => $mdesc],
+			['monster' => ':mimg', 'value' => $mimg],
+			['monster' => ':mthreat', 'value' => $mthreat],
+			['monster' => ':mstatus', 'value' => $mstatus],
+			]);
 			header("Location: ../monster.php");
 		}
 	} catch (Exception $e) {
