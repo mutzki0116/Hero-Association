@@ -1,7 +1,11 @@
 <?php  
 	include_once 'adminHeader.php';
 	
+	if(isset($_SESSION['heroID'])) {
+			$monsterQuery = "SELECT * FROM monsterList;";
+			$data = selectMonsters($monsterQuery);
 
+	}
 	if(isset($_POST['submitbutton'])){
 
 			$tasklevel = $_POST['tasklevel'];				
@@ -74,10 +78,9 @@
 						<input type="text" name="stats" value="Ongoing" style="display: none">
 						<label>Monster</label>
 						<select class="form-control" name="monster_name">
-							<option>Boros</option>
-							<option>Vaccine Man</option>
-							<option>Deep Sea King</option>
-							<option>Garou</option>
+							<?php foreach ($data as $monstername): ?>
+							<option><?php echo $monstername['monster_name']; ?></option>
+							<?php endforeach ?>
 						</select>
 					</div>
 				</div>
