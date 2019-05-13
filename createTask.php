@@ -75,7 +75,7 @@
 			<!-- Galing sa database -->
 			<!-- sample -->
 					<div class="col-xl-4">
-						<input type="text" name="stats" value="Ongoing" style="display: none">
+						<input type="text" name="stats" value="Ongoingg" style="display: none">
 						<label>Monster</label>
 						<select class="form-control" name="monster_name">
 							<?php foreach ($data as $monstername): ?>
