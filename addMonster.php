@@ -1,7 +1,7 @@
 <?php  
 	include_once 'adminHeader.php';
 	include_once './_includes/config.php';
-	
+
 	if (isset($_POST['addMonster'])) {
 		$mname = $_POST['name'];
 		$mdesc = $_POST['desc'];
@@ -18,6 +18,9 @@
 		$monsterResult->bindParam(':mstatus',$mstatus);
 		$monsterResult->execute();
 		header("Location: ../monster.php");
+	}
+	else{
+		echo "Bat wala!!!";
 	}
 ?>
 <div class="container">
