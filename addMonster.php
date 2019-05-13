@@ -4,7 +4,7 @@
 	try {
 		if (isset($_POST['addMonster'])) {
 			$mname = $_POST['name'];
-			$mdesc = $_POS	T['desc'];
+			$mdesc = $_POST['desc'];
 			$mthreat = $_POST['threat'];
 			$mimg = $_POST['img'];
 			$mstatus = $_POST['stats'];
