@@ -29,7 +29,7 @@
 <div class="container">
 	<form method="post" action="#" class="createTask">
 	<div class="form-group">
-	<h2>Add a Monster</h2>
+	<h2>Add Monsters</h2>
 	<div class="row">
 
 		<div class="col-xl-4">
