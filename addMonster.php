@@ -1,10 +1,11 @@
 <?php  
 	include_once 'adminHeader.php';
 	include_once './_includes/config.php';
+	
 	if (isset($_POST['addMonster'])) {
 		$mname = $_POST['name'];
 		$mdesc = $_POST['desc'];
-		$mthreat = 'mthreat';
+		$mthreat = $_POST['threat'];
 		$mimg = $_POST['img'];
 		$mstatus = $_POST['stats'];
 		$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_level, moster_status) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus);";
@@ -54,7 +55,6 @@
 			<label>Monster Description </label>
 			<textarea class="form-control" rows="5" placeholder="Description" name="desc" required></textarea>
 			<input type="submit" name="addMonster" class="btn btn-outline-primary addMonsterBtn" value="Submit">
-
 	</div>
 </form>
 </div>
