@@ -63,7 +63,7 @@
 			<input type="submit" name="addMonster" class="btn btn-outline-primary addMonsterBtn" value="Submit">
 		<?php 
 		$date = date("Y-m-d H:i:s");
-		echo '<input type="text" class="form-control a" name="date_added" value="'.$date.'">';
+		echo '<input type="text" class="form-control" name="date_added" value="'.$date.'" style="display:none">';
 		?>
 	</div>
 </form>
