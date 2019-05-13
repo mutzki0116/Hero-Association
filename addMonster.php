@@ -1,6 +1,6 @@
 <?php  
 	include_once 'adminHeader.php';
-		if (isset($_POST['addMonster'])) {
+		if ($_SERVER['REQUEST_METHOD'] == 'POST')) {
 			
 			$mname = $_POST['monster_name'];				
 			$mdesc = $_POST['monster_desc'];
@@ -23,8 +23,6 @@
 		else{
 			echo"Undefined Error";
 		}
-
-	
 ?>
 <div class="container">
 	<form method="post" action="#" class="createTask">
