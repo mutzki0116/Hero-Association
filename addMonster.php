@@ -58,13 +58,13 @@
 			<div class="form-group">
 			<input type="text" name="name" class="form-control" placeholder="Monster Name">
 		</div>
-		<?php 
-		$date = date("Y-m-d H:i:s");
-		echo '<input type="text" name="date_added" value="'.$date.'">';
-		?>
 			<label>Monster Description </label>
 			<textarea class="form-control" rows="5" placeholder="Description" name="desc" required></textarea>
 			<input type="submit" name="addMonster" class="btn btn-outline-primary addMonsterBtn" value="Submit">
+		<?php 
+		$date = date("Y-m-d H:i:s");
+		echo '<input type="text" class="form-control" name="date_added" value="'.$date.'">';
+		?>
 	</div>
 </form>
 </div>
