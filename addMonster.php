@@ -20,6 +20,10 @@
 			header("Location: ../HA/addMonster.php?newMonsterAdded");
 			session_start();
 		}
+		else{
+			echo"Undefined Error";
+		}
+
 	
 ?>
 <div class="container">
