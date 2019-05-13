@@ -9,7 +9,7 @@
 			$mimg = $_POST['img'];
 			$mstatus = $_POST['stats'];
 			$monsterQuery = "INSERT INTO monsterList(monster_name, monster_description, monster_image, monster_threat_lvl, moster_status) VALUES(:mname,:mdesc,:mimg,:mthreat,:mstatus);";
-			$data = addMonster($monsterQuery, [
+			$data = addMonsters($monsterQuery, [
 			['monster' => ':mname', 'value' => $mname],
 			['monster' => ':mdesc', 'value' => $mdesc],
 			['monster' => ':mimg', 'value' => $mimg],
