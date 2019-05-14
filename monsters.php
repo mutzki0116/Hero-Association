@@ -5,7 +5,7 @@
 	$monsterQuery = "SELECT * FROM monsterList;";
 	$data = selectMonsters($monsterQuery);
 ?>
-<h1 class="pageTitle">Monster Gallery</h1>
+<h1 class="pageTitle">Monster Galleries</h1>
 
 <!-- Gumamit ng looping para idisplay lahat ng monsters na nasa database -->
 <!-- Ilagay sa loob ng _images/monsters -->
