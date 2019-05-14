@@ -16,7 +16,7 @@
 			$taskname = $_POST['taskname'];
 			$taskstatus = $_POST['stats'];
 
-		$taskQuery = "INSERT INTO hero_tasks(task_threat_level,task_city, task_monster,task_name task_description, task_status) VALUES(:tasklvl, :taskcity, :taskmonster, :taskname, :taskdesc, :taskstatus);";
+		$taskQuery = "INSERT INTO hero_tasks(task_threat_level,task_city, task_monster,task_name, task_description, task_status) VALUES(:tasklvl, :taskcity, :taskmonster, :taskname, :taskdesc, :taskstatus);";
 		
 		$data = selectTasks($taskQuery,[
 			['task' => ':tasklvl', 'value' => $tasklevel],
