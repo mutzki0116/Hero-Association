@@ -12,7 +12,7 @@
 <div class="container">
 	<form method="post" action="#" class="createTask">
 	<div class="form-group">
-	<h2>Deploy Task</h2>
+	<h2>Deploy Tasks</h2>
 	<div class="row">
 
 
