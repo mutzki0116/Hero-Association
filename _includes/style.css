@@ -28,10 +28,9 @@ body {
 	text-align: center;
 }
 .loginBtn {
-	border: 1px solid white;
-	float: right;
-	background-color: transparent;
-	margin: 10%;
+	position: fixed;
+	bottom: 35%;
+	right: 9%;
 }
 .registerBtn {
 	position: fixed;
@@ -65,6 +64,7 @@ body {
 	height: 100px;
 }
 .modal-design {
+	left: 0;
 	text-align: center;
 	background-color: #000;
 	top: 0%;
@@ -78,6 +78,17 @@ body {
 	color: white;
 	font-weight: bold;
 }
+.loginContainer {
+	padding: 20% 4%;
+	color: white;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
 .container1 {
 	padding: 2% 4%;
 	color: white;
@@ -89,16 +100,16 @@ body {
 	overflow-y: auto;
 	overflow-x: hidden;
 }
-.container1 input {
+.container1 input, .loginContainer input {
 	width: 55%;
 	display: inline-block;
 	height: 10%;
 }
-.container1 label {
+.container1 label,.loginContainer label {
 	width: 30%;
 	margin-right: 20px;
 }
-.container1 h2 {
+.container1 h2,.loginContainer h2 {
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
