@@ -16,7 +16,7 @@
 	<div class="row">	
 		<?php foreach ($data as $monsterInfo):  ?>
 		<?php echo '<div class="col-xl-4 col-md-6">
-			<div class="card monsterContainer">
+			<div class="card text-white bg-dark mb-3 monsterContainer">
 			<img class="card-img-top monster-img" src="data:image/jpeg;base64,'.base64_encode( $monsterInfo['monster_image'] ).'"/>
 			  	<div class="card-body">
 				    <h2 class="card-title"> '.$monsterInfo['monster_name'].' </h2>

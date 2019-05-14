@@ -199,6 +199,7 @@ body {
 .monsterContainer {
 	text-align: center;
 	margin-bottom: 20px;
+	opacity: 0.8;
 }
 .monsterContainer h2{
 	text-transform: uppercase;
