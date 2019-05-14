@@ -6,7 +6,7 @@
 <div class="container">
 	<div class="row">	
 		<div class="col-xl-4 col-md-6">
-			<div class="card monsterContainer">
+			<div class="card monsterContainer text-white bg-dark mb-3">
 			<img class="card-img-top monster-img" src="_images/levels/god.jpg">
 			  	<div class="card-body">
 				    <h2 class="card-title">GOD</h2>
@@ -18,7 +18,7 @@
 		</div>
 		
 		<div class="col-xl-4 col-md-6">
-			<div class="card monsterContainer">
+			<div class="card monsterContainer text-white bg-dark mb-3">
 			<img class="card-img-top monster-img" src="_images/levels/dragon.jpg">
 			  	<div class="card-body">
 				    <h2 class="card-title">DRAGON</h2>
@@ -30,7 +30,7 @@
 		</div>
 
 		<div class="col-xl-4 col-md-6">
-			<div class="card monsterContainer">
+			<div class="card monsterContainer text-white bg-dark mb-3">
 			<img class="card-img-top monster-img" src="_images/levels/demon.jpg">
 			  	<div class="card-body">
 				    <h2 class="card-title">DEMON</h2>
@@ -42,7 +42,7 @@
 		</div>
 
 		<div class="col-xl-4 col-md-6">
-			<div class="card monsterContainer">
+			<div class="card monsterContainer text-white bg-dark mb-3">
 			<img class="card-img-top monster-img" src="_images/levels/tiger.jpg">
 			  	<div class="card-body">
 				    <h2 class="card-title">TIGER</h2>
