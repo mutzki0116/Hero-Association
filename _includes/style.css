@@ -27,11 +27,6 @@ body {
 .dropdown-menu {
 	text-align: center;
 }
-.Avatar {	
-	width: 75px;
-	height: 75px;
-	margin: 5%;
-}
 .loginBtn {
 	border: 1px solid white;
 	float: right;
@@ -39,12 +34,11 @@ body {
 	margin: 10%;
 }
 .registerBtn {
-	border: 1px solid white;
-	float: right;
-	background-color: transparent;
-	margin: 5% 10%;
+	position: fixed;
+	bottom: 3%;
+	right: 5%;
 }
-#loginModal input[type="text"],#loginModal input[type="password"] {
+/*#loginModal input[type="text"],#loginModal input[type="password"] {
 	border: none;
 	background-color: transparent;
 	border-bottom: 2px solid white;
@@ -53,8 +47,8 @@ body {
 	margin: 0 auto;
 	margin-bottom: 20px;
 	padding: 5px 10px;
-}
-#registrationModal input[type="text"],#registrationModal input[type="password"] {
+}*/
+/*#registrationModal input[type="text"],#registrationModal input[type="password"] {
 	border: none;
 	background-color: transparent;
 	border-bottom: 2px solid white;
@@ -63,31 +57,72 @@ body {
 	margin: 0 auto;
 	margin-bottom: 20px;
 	padding: 5px 10px;
+}*/
+.Avatar {	
+	position: relative;
+	top: 25%;
+	width: 100px;
+	height: 100px;
+}
+.modal-design {
+	text-align: center;
+	background-color: #000;
+	top: 0%;
+	height: 100%;
+	position: fixed;
+	width: 50%;
+}
+.modal-design h2 {
+	position: relative;
+	top: 30%;
+	color: white;
+	font-weight: bold;
+}
+.container1 {
+	padding: 2% 4%;
+	color: white;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.container1 input {
+	width: 55%;
+	display: inline-block;
+	height: 10%;
+}
+.container1 label {
+	width: 30%;
+	margin-right: 20px;
+}
+.container1 h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 50px;
 }
 .modal { 
-	margin-top: 5%;
-	text-align: center;
 	display: none; 
     position: fixed;
     z-index: 1;
-    left: 25%;
-    top: 0;
-    width: 50%;
-    overflow: auto;
+    left: 0%;
+    top: 0%;
+    width: 100%;
 }
 .modal-content {
 	padding-top: 5%;
   	background-color: rgba(52,58,64,0.7);
-  	margin: 5px auto;
-	border: 2px solid grey;
+  	margin: auto;
   	width: 100%;
-  	height: 85%;
+  	height: 100%;
+  	overflow: auto;
 }
 .chooseImg {
-	margin-top: 5%;
 	display: block;
-	padding-left: 10%;
-	color: white;
+	color: black;
 }
 .close {
   position: absolute;
@@ -122,6 +157,7 @@ body {
 .heroes .card-text, .disaster .card-text {
     white-space: normal;
 }
+
 /* heroProfile.php */
 
 .profile {

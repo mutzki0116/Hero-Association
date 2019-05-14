@@ -84,9 +84,12 @@ class="close" title="Close Modal">&times;</span>
     </div>
     <div class="container">
       <div class="container1">
-      <input type="text" placeholder="Enter Username" name="username" required>
-      <input type="password" placeholder="Enter Password" name="password" required>
-
+      <div class="form-group">
+      <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
+      </div>
+      <div class="form-group">
+      <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
+      </div>
       <button type="submit" class="btn btn-secondary loginBtn" name="submitbutton">Login</button>
       </div>
     </div>
@@ -97,27 +100,51 @@ class="close" title="Close Modal">&times;</span>
 <!-- RegistrationForm Modal -->
 
 <div id="registrationModal" class="modal">
-  <span onclick="document.getElementById('registrationModal').style.display='none'"
-class="close" title="Close Modal">&times;</span>
 
   <form class="modal-content animate regModal" method="POST" action="/_includes/newHero.php">
-    <div class="imgcontainer">
+        <div class="modal-design">
       <img src="_images/ha-logo.png" alt="Avatar" class="Avatar">
-    </div>
+          <h2>Want to become a hero?</h2>
+        </div>
 
-    <div class="container">
       <div class="container1">
-      <input type="text" placeholder="Username" name="username" required>
-      <input type="password" placeholder="Password" name="password" required>
-      <input type="text" placeholder="Firstname" name="fname" required>
-      <input type="text" placeholder="Lastname" name="lname" required>
-      <input type="text" placeholder="Extension" name="extension" required>
-      <input type="text" placeholder="Style" name="style" required>
-      <input type="text" placeholder="City" name="city" required>
-      <input class="chooseImg" type="file" name="image" required>
+  <span onclick="document.getElementById('registrationModal').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+    <h2>Hero Registration</h2>
+      <div class="form-group">
+      <label>Username </label>
+      <input class="form-control" type="text" placeholder="Mutzki" name="username" required>
+      </div>
+      <div class="form-group">
+      <label>Password </label>
+      <input type="password" class="form-control" placeholder="Password" name="password" required>
+    </div>
+      <div class="form-group">
+      <label>FirstName </label>
+      <input type="text" class="form-control" placeholder="Melchor" name="fname" required>
+    </div>
+      <div class="form-group">
+      <label>LastName </label>
+      <input type="text" class="form-control" placeholder="Lobete" name="lname" required>
+    </div>
+      <div class="form-group">
+      <label>Suffix </label>
+      <input type="text" class="form-control" placeholder="Jr." name="extension">
+    </div>
+      <div class="form-group">
+      <label>Fighting Style </label>
+      <input type="text" class="form-control" placeholder="Magtago ng feelings" name="style" required>
+    </div>
+      <div class="form-group">
+      <label>City </label>
+      <input type="text" class="form-control" placeholder="Philippines" name="city" required>
+    </div>
+      <div class="form-group">
+      <label>Image </label>
+      <input class="chooseImg form-control" type="file" name="image" required>
+    </div>
       <button type="submit" class="btn btn-secondary registerBtn" name="submitbutton">Register</button>
       </div>
-    </div>
   </form>
 </div> 
 
