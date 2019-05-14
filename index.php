@@ -57,7 +57,7 @@ if(isset($_POST['submitbutton'])){
         <a class="nav-link" href="#Heroes">Heroes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Monsters</a>
+        <a class="nav-link" href="#Disaster">Disaster</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -122,20 +122,21 @@ class="close" title="Close Modal">&times;</span>
 </div> 
 
 <div>
-    <video id="opening" playsinline controls>
+    <video id="opening" playsinline controls loop>
    <source src="op.mp4" type="video/mp4">
 </video>
 </div>
+
+
+<div class="container">
 <section class="heroes">
   <a name="Heroes"></a>
-  <div class="container">
   <h2>Heroes</h2>
   <p>Heroes (ヒーロー, Hīrō) are individuals who fight for justice against all evils in the world. They also protect innocent civilians from any harm against natural disasters, Mysterious Beings, Villains, and other threats. Most heroes are registered with the Hero Association and are divided into four classes: From lowest to highest, there's C-Class, B-Class, A-Class and S-Class, each having their own individual numbered rankings within the class. However, the Rank 1 heroes of A-Class and B-Class are substantially more powerful than the bottom-ranked hero of S-Class and A-Class respectively; they chose to keep their Rank 1 position in their current class as a gatekeeper, or for reasons of their own. </p>
   <div class="row"> 
 
     <div class="col-lg-3">
-      <div class="card">
-        <div class="card text-center">
+        <div class="card text-center  text-white bg-dark mb-3">
           <div class="card-header">S-Class</div>
             <div class="card-body">
               <h5 class="card-title">S級</h5>
@@ -144,12 +145,10 @@ class="close" title="Close Modal">&times;</span>
               <a href="https://onepunchman.fandom.com/wiki/Heroes">READ MORE</a>
             </div>
         </div>
-      </div>
     </div>
 
     <div class="col-lg-3">
-      <div class="card">
-        <div class="card text-center">
+        <div class="card text-center  text-white bg-dark mb-3">
           <div class="card-header">A-Class</div>
             <div class="card-body">
               <h5 class="card-title">A級</h5>
@@ -158,12 +157,10 @@ class="close" title="Close Modal">&times;</span>
               <a href="https://onepunchman.fandom.com/wiki/Heroes">READ MORE</a>
             </div>
         </div>
-      </div>
     </div>
 
   <div class="col-lg-3">
-      <div class="card">
-        <div class="card text-center">
+        <div class="card text-center  text-white bg-dark mb-3">
           <div class="card-header">B-Class</div>
             <div class="card-body">
               <h5 class="card-title">B級</h5>
@@ -172,12 +169,10 @@ class="close" title="Close Modal">&times;</span>
               <a href="https://onepunchman.fandom.com/wiki/Heroes">READ MORE</a>
             </div>
         </div>
-      </div>
     </div>
 
   <div class="col-lg-3">
-      <div class="card">
-        <div class="card text-center">
+        <div class="card text-center  text-white bg-dark mb-3">
           <div class="card-header">C-Class</div>
             <div class="card-body">
               <h5 class="card-title">C級</h5>
@@ -186,13 +181,72 @@ class="close" title="Close Modal">&times;</span>
               <a href="https://onepunchman.fandom.com/wiki/Heroes">READ MORE</a>
             </div>
         </div>
-      </div>
     </div>
 
   </div>
-</div>
 
 </section>
+
+
+<section class="disaster">
+  
+  <a name="Disaster"></a>
+    <h2>Disaster Levels</h2>
+    <p>Disaster levels are the designations given by the Hero's Association to rank threats by strength and scope of destruction. There are 5 threat levels with danger ranging from threatening people to cities or even the entire world.</p>
+    <div class="row">
+      
+    <div class="col-lg-3">
+        <div class="card text-center  text-white bg-dark mb-3">
+          <div class="card-header">GOD</div>
+            <div class="card-body">
+              <p class="card-text">A threat endangering the survival of humanity in general.</p><br>
+              <hr>
+              <a href="https://onepunchman.fandom.com/wiki/Category:God">READ MORE</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="card text-center  text-white bg-dark mb-3">
+          <div class="card-header">DRAGON</div>
+            <div class="card-body">
+              <p class="card-text">Dragon refers to the Hero's Association designation for any threat to multiple cities.</p>
+              <br>
+              <hr>
+              <a href="https://onepunchman.fandom.com/wiki/Category:Dragon">READ MORE</a>
+            </div>
+        </div>
+    </div>
+
+        <div class="col-lg-3">
+        <div class="card text-center  text-white bg-dark mb-3">
+          <div class="card-header">DEMON</div>
+            <div class="card-body">
+              <p class="card-text">Demon refers to the Hero's Association designation for any threat to a city.</p>
+              <br>
+              <hr>
+              <a href="https://onepunchman.fandom.com/wiki/Category:Demon">READ MORE</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="card text-center  text-white bg-dark mb-3">
+          <div class="card-header">TIGER</div>
+            <div class="card-body">
+              <p class="card-text">Tiger refers to the Hero's Association designation for any threat to people.</p>
+              <br>
+              <hr>
+              <a href="https://onepunchman.fandom.com/wiki/Category:Tiger">READ MORE</a>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</section>
+  
+</div>
+
 </main>
 
 
