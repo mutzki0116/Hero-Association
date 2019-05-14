@@ -1,5 +1,9 @@
 body {
-	background: url('../_images/ha-logo-hd.png');
+	background-image: linear-gradient(
+    rgba(36, 149, 194, 0.5),
+    rgba(4,4,4, 0.5)
+    ),
+    url(../_images/ha-logo-hd.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -100,21 +104,22 @@ body {
 	width: 100%;
 	margin-bottom: 5%;
 }
-.heroes {
+.heroes, .disaster {
 	text-align: center;
 	color: white;
+	padding-bottom: 20px;
+	border-bottom: 2px solid white;
 }
-
-.heroes h2 {
+.heroes h2, .disaster h2 {
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: 20px auto;
 }
-.heroes .card {
-	color: black;
-	margin-bottom: 20px;
+.heroes .card, .disaster .card {
+	opacity: 0.9;
+	margin: 20px auto;
 }
-.heroes .card-text {
+.heroes .card-text, .disaster .card-text {
     white-space: normal;
 }
 /* heroProfile.php */
