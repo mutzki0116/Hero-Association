@@ -76,13 +76,13 @@
 			<!-- sample -->
 					<div class="col-xl-4">
 						<input type="text" name="stats" value="Ongoingg" style="display: none">
-						<input type="text" name="taskname" placeholder="Task Name" required>
 						<label>Monster</label>
 						<select class="form-control" name="monster_name">
 							<?php foreach ($data2 as $monstername): ?>
 							<option><?php echo $monstername['monster_name']; ?></option>
 							<?php endforeach ?>
 						</select>
+						<input type="text" class="form-control" name="taskname" placeholder="Task Name" required>
 					</div>
 				</div>
 				<label>Task Description </label>
