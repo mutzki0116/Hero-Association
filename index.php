@@ -79,18 +79,21 @@ if(isset($_POST['submitbutton'])){
 class="close" title="Close Modal">&times;</span>
 
   <form class="modal-content animate loginModal" method="POST" action="#">
-    <div class="imgcontainer">
+         <div class="modal-design">
       <img src="_images/ha-logo.png" alt="Avatar" class="Avatar">
-    </div>
+          <h2>Want to become a hero?</h2>
+        </div>
     <div class="container">
-      <div class="container1">
+      <div class="loginContainer">
       <div class="form-group">
+      <label>Username </label>
       <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
       </div>
       <div class="form-group">
+      <label>Password </label>
       <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
       </div>
-      <button type="submit" class="btn btn-secondary loginBtn" name="submitbutton">Login</button>
+      <button type="submit" class="btn btn-secondary loginBtn" name="submitbutton">Sign In</button>
       </div>
     </div>
   </form>
