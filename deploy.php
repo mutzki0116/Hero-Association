@@ -2,7 +2,7 @@
 	include_once 'adminHeader.php';
 
 	if (isset($_SESSION['heroID'])) {
-		$monsterQuery = "SELECT * FROM heroprofiles;";
+		$monsterQuery = "SELECT * FROM heroProfiles;";
 		$data2 = selectMonsters($monsterQuery);		
 	}
 	else{
