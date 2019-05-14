@@ -13,14 +13,16 @@
 			$taskmonster = $_POST['monster_name'];
 			$taskdesc = $_POST['task_desc'];
 			// $_POST['stats'] = 'Ongoing';
+			$taskname = $_POST['taskname'];
 			$taskstatus = $_POST['stats'];
 
-		$taskQuery = "INSERT INTO hero_tasks(task_threat_level,task_city, task_monster, task_description, task_status) VALUES(:tasklvl, :taskcity, :taskmonster, :taskdesc, :taskstatus);";
+		$taskQuery = "INSERT INTO hero_tasks(task_threat_level,task_city, task_monster,task_name task_description, task_status) VALUES(:tasklvl, :taskcity, :taskmonster, :taskname, :taskdesc, :taskstatus);";
 		
 		$data = selectTasks($taskQuery,[
 			['task' => ':tasklvl', 'value' => $tasklevel],
 			['task' => ':taskcity', 'value' => $taskcity],
 			['task' => ':taskmonster', 'value' => $taskmonster],
+			['task' => ':taskname', 'value' => $taskname],
 			['task' => ':taskdesc', 'value' => $taskdesc],
 			['task' => ':taskstatus', 'value' => $taskstatus],
 	]);
