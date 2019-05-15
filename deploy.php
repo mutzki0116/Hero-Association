@@ -2,11 +2,11 @@
 	include_once 'adminHeader.php';
 
 	if (isset($_SESSION['heroID'])) {
-		$monsterQuery = "SELECT * FROM heroProfiles;";
-		$data2 = selectMonsters($monsterQuery);	
-		$monsterQuery3 = "SELECT task_name FROM hero_tasks;";
-		$data3 = selectMonsters($monsterQuery3);	
-		if (isset($_SESSION['createTask'])) {
+		$heroQuery = "SELECT * FROM heroProfiles;";
+		$data2 = selectHeroes($heroQuery);	
+		$taskQuery = "SELECT task_name FROM hero_tasks;";
+		$data3 = selectTasks($taskQuery);	
+		if (isset($_POST['createTask'])) {
 			$one = $_POST['optionone'];
 			$two = $_POST['optiontwo'];
 			$deployQuery = "SELECT hero_user_id FROM heroProfiles WHERE hero_username = :username";
@@ -23,6 +23,9 @@
 				['deploy' => ':heroid', 'value' => $userData],
 				['deploy' => ':taskid', 'value' => $taskData],
 			]);
+			else{
+				var_dump($data4);
+			}
 		}
 	}
 	else{
