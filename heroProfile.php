@@ -1,7 +1,6 @@
 <?php  
 	include_once 'homepageHeader.php';
 	include_once './_includes/config.php';
-	session_start();
 	
 		if(isset($_SESSION['heroID'])){
 			$hero_id = $_SESSION['heroID'];
