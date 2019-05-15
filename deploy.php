@@ -6,7 +6,7 @@
 		$data2 = selectHeroes($heroQuery);	
 		$monsterQuery = "SELECT task_name FROM hero_tasks;";
 		$data3 = selectMonsters($monsterQuery);	
-		if (isset($_POST['createTask'])) {
+		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$one = $_POST['optionone'];
 			$two = $_POST['optiontwo'];
 			$heroQuery = "SELECT hero_user_id FROM heroProfiles WHERE hero_username = :username";
