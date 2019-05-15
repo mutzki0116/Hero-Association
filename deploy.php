@@ -23,6 +23,9 @@
 				['deploy' => ':heroid', 'value' => $userData],
 				['deploy' => ':taskid', 'value' => $taskData],
 			]);
+			else{
+				var_dump($data4);
+			}
 		}
 	}
 	else{
