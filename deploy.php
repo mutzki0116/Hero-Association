@@ -4,8 +4,8 @@
 	if (isset($_SESSION['heroID'])) {
 		$heroQuery = "SELECT * FROM heroProfiles;";
 		$data2 = selectHeroes($heroQuery);	
-		$taskQuery = "SELECT task_name FROM hero_tasks;";
-		$data3 = selectTasks($taskQuery);	
+		$monsterQuery = "SELECT task_name FROM hero_tasks;";
+		$data3 = selectMonsters($monsterQuery);	
 		if (isset($_POST['createTask'])) {
 			$one = $_POST['optionone'];
 			$two = $_POST['optiontwo'];
