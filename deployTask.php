@@ -3,7 +3,10 @@
 
 	if (isset($_SESSION['heroID'])) {
 		$monsterQuery = "SELECT * FROM heroProfiles;";
-		$data2 = selectMonsters($monsterQuery);		
+		$data2 = selectMonsters($monsterQuery);
+		$monsterQuery2 = "SELECT task_name FROM hero_tasks;";
+		$data3 = selectTasks($monsterQuery2);
+					
 	}
 	else{
 		echo "No user logged!";
@@ -14,7 +17,7 @@
 	<div class="form-group">
 	<h2>Deploy Tasks</h2>
 	<div class="row">
-
+g
 
 			<!-- Galing sa database -->
 			<!-- sample -->
@@ -32,8 +35,9 @@
 		<div class="col-xl-8">
 			<label>Task</label>
 			<select class="form-control">
-				<option>Kill</option>
-				<option>Capture</option>
+				<?php foreach ($data3 as $taskname): ?>
+				<option><?php echo $taskname['task_name']; ?></option>
+				<?php endforeach; ?>
 			</select>
 		</div>
 
