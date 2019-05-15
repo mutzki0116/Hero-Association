@@ -104,7 +104,7 @@ class="close" title="Close Modal">&times;</span>
 
 <div id="registrationModal" class="modal">
 
-  <form class="modal-content animate regModal" method="POST" action="/_includes/newHero.php">
+  <form class="modal-content animate regModal" method="POST" action="_includes/newHero.php">
         <div class="modal-design">
       <img src="_images/ha-logo.png" alt="Avatar" class="Avatar">
           <h2>Want to become a hero?</h2>

@@ -30,7 +30,7 @@
     	$heroResult->bindParam(':status', $status);
 		$heroResult->execute();
 		
-		header("Location: ../index2.php?newHeroAdded");
+		header("Location: ../index.php?newHeroAdded");
 		session_start();
 	
 	}
