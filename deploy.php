@@ -3,7 +3,9 @@
 
 	if (isset($_SESSION['heroID'])) {
 		$monsterQuery = "SELECT * FROM heroProfiles;";
-		$data2 = selectMonsters($monsterQuery);		
+		$data2 = selectMonsters($monsterQuery);	
+		$monsterQuery3 = "SELECT task_name FROM hero_tasks;";
+		$data3 = selectMonsters($monsterQuery3);	
 	}
 	else{
 		echo "No user logged!";
@@ -22,8 +24,8 @@
 		<div class="col-xl-4">
 			<label>Hero </label>
 			<select class="form-control">
-				<?php foreach ($data2 as $hero): ?>
-				<option><?php echo $hero['hero_username']; ?></option>
+				<?php foreach ($data3 as $task): ?>
+				<option><?php echo $task['task_name']; ?></option>
 				<?php endforeach; ?>
 			</select>
 		</div>
