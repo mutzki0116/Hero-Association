@@ -52,4 +52,15 @@
 				$stmt->execute();
 		}
 	}
+	function deployTask($deployQuery3){
+		$pdo = getConnection();
+		$stmt = $pdo->prepare($deployQuery3);
+		if (isset($params)) {
+			foreach ($params as $param) {
+					$parameter = (object) $param;
+					$stmt->bindParam($parameter->deploy, $parameter->value, PDO::PARAM_STR);	
+				} 	
+				$stmt->execute();
+		}
+	}
 ?>
