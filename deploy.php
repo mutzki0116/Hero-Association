@@ -9,21 +9,12 @@
 			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				$one = $_POST['optionone'];
 				$two = $_POST['optiontwo'];
-				$heroQuery = "SELECT hero_user_id FROM heroProfiles WHERE hero_username = :username";
-				$monsterQuery = "SELECT task_id FROM hero_tasks WHERE task_name = :taskname";
-				$userData = selectHeroes($heroQuery, [
-				['hero' => ':username', 'value' => $user],
-				]);
-				$taskData = selectTasks($monsterQuery,[
-					['task' => ':taskname', 'value' => $two],
-				]);
 				$deployQuery3 = "INSERT INTO deployTask(hero_user_id,task_id) VALUES(:heroid,:taskid);";
 				$data4 = deployTask($deployQuery3,[
-					['deploy' => ':heroid', 'value' => $userData],
-					['deploy' => ':taskid', 'value' => $taskData],
+					['deploy' => ':heroid', 'value' => $one],
+					['deploy' => ':taskid', 'value' => $two],
 				]);
 			}
-
 		}
 				else{
 				echo "No user logged!";
@@ -50,7 +41,7 @@
 			<label>Hero </label>
 			<select class="form-control" name="optionone">
 				<?php foreach ($data2 as $hero): ?>
-				<option><?php echo $hero['hero_username']; ?></option>
+				<option value="<?php echo $hero['hero_user_id']; ?>"><?php echo $hero['hero_username']; ?></option>
 				<?php endforeach; ?>
 			</select>
 		</div>
@@ -60,7 +51,7 @@
 			<label>Task</label>
 			<select class="form-control" name="optiontwo">
 				<?php foreach ($data3 as $task): ?>
-				<option><?php echo $task['task_name']; ?></option>
+				<option value="<?php echo $hero['task_id']; ?>"><?php echo $task['task_name']; ?></option>
 				<?php endforeach; ?>
 			</select>
 		</div>
