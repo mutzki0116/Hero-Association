@@ -29,7 +29,7 @@
 		}
 	}
 	
-	} catch (Exception $e) {
+	 catch (Exception $e) {
 		var_dump($e);
 	}
 	
