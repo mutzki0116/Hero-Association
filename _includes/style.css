@@ -251,6 +251,7 @@ body {
 /* homepage */
 
 .announcement {
+	top: 15%;
 	position: absolute;
 	left: 10%;
 	padding: 0 auto;
