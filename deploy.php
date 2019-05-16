@@ -6,28 +6,29 @@
 		$data2 = selectHeroes($heroQuery);	
 		$monsterQuery = "SELECT task_name FROM hero_tasks;";
 		$data3 = selectMonsters($monsterQuery);	
-		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-			$one = $_POST['optionone'];
-			$two = $_POST['optiontwo'];
-			$heroQuery = "SELECT hero_user_id FROM heroProfiles WHERE hero_username = :username";
-			$monsterQuery = "SELECT task_id FROM hero_tasks WHERE task_name = :taskname";
-			$userData = selectHeroes($heroQuery, [
-			['hero' => ':username', 'value' => $user],
-			]);
-			$taskData = selectTasks($monsterQuery,[
-				['task' => ':taskname', 'value' => $two],
-			]);
-			$deployQuery3 = "INSERT INTO deployTask(hero_user_id,task_id) VALUES(:heroid,:taskid);";
-			$data4 = deployTask($deployQuery3,[
-				['deploy' => ':heroid', 'value' => $userData],
-				['deploy' => ':taskid', 'value' => $taskData],
-			]);
+			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+				$one = $_POST['optionone'];
+				$two = $_POST['optiontwo'];
+				$heroQuery = "SELECT hero_user_id FROM heroProfiles WHERE hero_username = :username";
+				$monsterQuery = "SELECT task_id FROM hero_tasks WHERE task_name = :taskname";
+				$userData = selectHeroes($heroQuery, [
+				['hero' => ':username', 'value' => $user],
+				]);
+				$taskData = selectTasks($monsterQuery,[
+					['task' => ':taskname', 'value' => $two],
+				]);
+				$deployQuery3 = "INSERT INTO deployTask(hero_user_id,task_id) VALUES(:heroid,:taskid);";
+				$data4 = deployTask($deployQuery3,[
+					['deploy' => ':heroid', 'value' => $userData],
+					['deploy' => ':taskid', 'value' => $taskData],
+				]);
+			}
+				else{
+				echo "No user logged!";
+			}
 		}
-
 	}
-	else{
-		echo "No user logged!";
-	}
+	
 	} catch (Exception $e) {
 		var_dump($e);
 	}
