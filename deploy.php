@@ -23,10 +23,12 @@
 					['deploy' => ':taskid', 'value' => $taskData],
 				]);
 			}
+
+		}
 				else{
 				echo "No user logged!";
 			}
-		}
+		
 	}
 	
 	 catch (Exception $e) {
