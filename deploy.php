@@ -1,7 +1,7 @@
 <?php  
 	include_once 'adminHeader.php';
-
-	if (isset($_SESSION['heroID'])) {
+	try {
+		if (isset($_SESSION['heroID'])) {
 		$heroQuery = "SELECT * FROM heroProfiles;";
 		$data2 = selectHeroes($heroQuery);	
 		$monsterQuery = "SELECT task_name FROM hero_tasks;";
@@ -23,13 +23,15 @@
 				['deploy' => ':taskid', 'value' => $taskData],
 			]);
 		}
-		else{
-				var_dump($data4);
-		}
+
 	}
 	else{
 		echo "No user logged!";
 	}
+	} catch (Exception $e) {
+		var_dump($e);
+	}
+	
 ?>
 <div class="container">
 	<form method="post" action="#" class="createTask">
