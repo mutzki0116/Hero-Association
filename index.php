@@ -4,7 +4,7 @@
 if(isset($_POST['submitbutton'])){
 		$user = $_POST['username'];
 		$pass = $_POST['password'];
-		$heroQuery = "SELECT * FROM heroprofiles WHERE hero_username = :username && hero_password = :password ";
+		$heroQuery = "SELECT * FROM heroProfiles WHERE hero_username = :username && hero_password = :password ";
 		
 		$data = selectHeroes($heroQuery, [
 			['hero' => ':username', 'value' => $user],
