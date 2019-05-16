@@ -9,8 +9,8 @@
 			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				$one = $_POST['optionone'];
 				$two = $_POST['optiontwo'];
-				$deployQuery3 = "INSERT INTO deployTask(hero_user_id,task_id) VALUES(:heroid,:taskid);";
-				$data4 = deployTask($deployQuery3,[
+				$deployQuery = "INSERT INTO deployTask(hero_user_id,task_id) VALUES(:heroid,:taskid);";
+				$data4 = deployTask($deployQuery,[
 					['deploy' => ':heroid', 'value' => $one],
 					['deploy' => ':taskid', 'value' => $two],
 				]);
@@ -19,7 +19,6 @@
 				else{
 				echo "No user logged!";
 			}
-		
 	}
 	
 	 catch (Exception $e) {

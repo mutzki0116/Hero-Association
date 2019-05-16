@@ -52,9 +52,9 @@
 				$stmt->execute();
 		}
 	}
-	function deployTask($deployQuery3){
+	function deployTask($deployQuery){
 		$pdo = getConnection();
-		$stmt = $pdo->prepare($deployQuery3);
+		$stmt = $pdo->prepare($deployQuery);
 		if (isset($params)) {
 			foreach ($params as $param) {
 					$parameter = (object) $param;
