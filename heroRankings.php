@@ -7,7 +7,7 @@
 	$data = selectRanking($heroQuery);
 
 ?>
-<!-- <h1>Rankings</h1>
+<!--  <h1>Rankings</h1>
 <?php 
 foreach ($data as $heroInfo):
 ?>
@@ -30,11 +30,8 @@ foreach ($data as $heroInfo):
  -->
 
 <div class="container">
-	<div class="card mt-5">
-		<div class="card-header">
-			<h2>My Tasks</h2>
-			<div class="card-body">
-				<table class="table table-bordered">
+	<div class="taskContainer table-responsive">
+				<table class="table table-dark table-bordered table-striped">
 					<tr>
 						<th>CLASS</th>
 						<th>RANK</th>
@@ -50,9 +47,7 @@ foreach ($data as $heroInfo):
 					</tr>
 
 				</table>
-			</div>
-		</div>
-	</div>
+				</div>
 </div>
 
 </body>
