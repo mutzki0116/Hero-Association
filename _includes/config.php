@@ -52,7 +52,7 @@
 				$stmt->execute();
 		}
 	}
-	function deployTask($deployQuery){
+	function deployTask($deployQuery, $params = []){
 		$pdo = getConnection();
 		$stmt = $pdo->prepare($deployQuery);
 		if (isset($params)) {
