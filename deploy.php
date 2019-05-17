@@ -14,6 +14,7 @@
 					['deploy' => ':heroid', 'value' => $one],
 					['deploy' => ':taskid', 'value' => $two],
 				]);
+				var_dump($data4);
 			}
 		}
 				else{
