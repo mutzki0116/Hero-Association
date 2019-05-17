@@ -10,11 +10,12 @@
 				$one = $_POST['optionone'];
 				$two = $_POST['optiontwo'];
 				$deployQuery = "INSERT INTO deployTask(hero_user_id,task_id) VALUES(:heroid,:taskid);";
-				$data4 = deployTask($deployQuery,[
-					['deploy' => ':heroid', 'value' => $one],
-					['deploy' => ':taskid', 'value' => $two],
-				]);
-				var_dump($data4);
+				$pdo = getConnection();
+				$deployResult = $pdo->prepare($deployQuery);
+    			$deployResult->bindParam(':heroid', $one);
+    			$deployResult->bindParam(':taskid', $two);
+    			$deployQuery->execute();
+    			header("Location: ../deploy.php?Deployed");
 			}
 		}
 				else{
