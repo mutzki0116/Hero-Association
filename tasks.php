@@ -2,8 +2,8 @@
 	include_once 'homepageHeader.php';
 	if (isset($_SESSION['heroID'])) {
 		$id = $_SESSION['heroID'];
-		$taskQuery = "SELECT * FROM hero_tasks WHERE task_to ='".$id."' ;";
-		$data = selectTasks($taskQuery);
+		$taskQuery = "SELECT * FROM hero_tasks WHERE task_to = :id ;";
+		$data = selectTasks($taskQuery,['task' => ':id', 'value' => $id]);
 		var_dump($data);
 	}
 	else{
