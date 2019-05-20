@@ -80,7 +80,7 @@
 					<label>Assign To:</label>
 					<select class="form-control" name="assignto">	
 							<?php foreach ($data3 as $hero): ?>
-							<option value="<?php echo $hero['hero_user_id'];?>"></option>
+							<option ><?php echo $hero['hero_user_id'];?></option>
 							<?php endforeach ?>
 					</select>
 				</div>
