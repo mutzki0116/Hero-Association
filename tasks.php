@@ -1,5 +1,11 @@
 <?php 
 	include_once 'homepageHeader.php';
+	if (isset($_SESSION['heroID'])) {
+		$taskQuery = "SELECT * FROM heroProfiles WHERE hero_role = 'hero';";
+		$data = selectTask($taskQuery);
+	}
+	
+
 ?>
 <div class="container">
 	<div class="taskContainer table-responsive">
@@ -11,31 +17,15 @@
 						<th>Description</th>
 						<th>Status</th>
 					</tr>
-	
 					<tr>
-						<td>GOD</td>
-						<td>BOROS</td>
-						<td>Z</td>
-						<td>asdjjasdhjsakdhkj</td>
-						<td>Finished</td>
+						<?php foreach ($data as $task): ?>
+						<td><?php echo $task['task_threat_level']; ?></td>
+						<td><?php echo $task['task_monster']; ?></td>
+						<td><?php echo $task['task_city']; ?></td>
+						<td><?php echo $task['task_description']; ?></td>
+						<td><?php echo $task['task_status']; ?></td>
+						<?php endforeach; ?>
 					</tr>
-
-					<tr>
-						<td>University</td>
-						<td>ERROL</td>
-						<td>BCP</td>
-						<td>Invisible database server</td>
-						<td>Ongoing</td>
-					</tr>
-
-					<tr>
-						<td>Student</td>
-						<td>JASPER</td>
-						<td>BCP</td>
-						<td>Abangan sa gate</td>
-						<td>Finished</td>
-					</tr>
-
 				</table>
 	</div>
 </div>
