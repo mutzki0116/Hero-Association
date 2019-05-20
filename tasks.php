@@ -5,6 +5,9 @@
 		$taskQuery = "SELECT * FROM hero_tasks WHERE task_to = '".$id."';";
 		$data = selectTasks($taskQuery);
 	}
+	else{
+		header("Location: tasks.php?Nouserlogged");
+	}
 	
 
 ?>
