@@ -24,8 +24,12 @@
 					</tr>
 					<tr>
 						<?php foreach($data as $task): ?>
-						<td><?php echo $task; ?></td>
-						
+						<td><?php echo $task['task_threat_level']; ?></td>
+						<td><?php echo $task['task_to']; ?></td>
+						<td><?php echo $task['task_monster']; ?></td>
+						<td><?php echo $task['task_city']; ?></td>
+						<td><?php echo $task['task_description']; ?></td>
+						<td><?php echo $task['task_status']; ?></td>
 						<?php endforeach ?>
 					</tr>
 				</table>
