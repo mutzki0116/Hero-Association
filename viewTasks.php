@@ -30,7 +30,7 @@
 						<td><?php echo $task['task_city']; ?></td>
 						<td><?php echo $task['task_description']; ?></td>
 						<td><?php echo $task['task_status']; ?></td>
-						<?php endforeach ?>
+						<?php endforeach; ?>
 					</tr>
 				</table>
  	</div>
