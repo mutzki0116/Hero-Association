@@ -4,7 +4,8 @@
 	if(isset($_SESSION['heroID'])) {
 			$monsterQuery = "SELECT * FROM monsterList;";
 			$data2 = selectMonsters($monsterQuery);
-
+			$heroQuery = "SELECT * FROM heroProfiles WHERE hero_role = 'hero';";
+			$data3 = selectHeroes($heroQuery);
 	}
 	if(isset($_POST['submitbutton'])){
 
@@ -42,6 +43,9 @@
 							<option>Demon</option>
 							<option>Tiger</option>
 						</select>
+						<label>Task Name:</label>
+						<input type="text" class="form-control " name="taskname" placeholder="Task Name" required>
+					
 				</div>
 				<div class="col-xl-4">
 					<label>City </label>
@@ -73,6 +77,12 @@
 						<option>Y</option>
 						<option>Z</option>
 					</select>
+					<label>Assign To:</label>
+					<select class="form-control">	
+							<?php foreach ($data3 as $hero): ?>
+							<option><?php echo $hero['hero_firstname'], "-",$hero['hero_lastname']; ?></option>
+							<?php endforeach ?>
+					</select>
 				</div>
 			<!-- Galing sa database -->
 			<!-- sample -->
@@ -84,8 +94,7 @@
 							<option><?php echo $monstername['monster_name']; ?></option>
 							<?php endforeach ?>
 						</select>
-						<input type="text" class="form-control" name="taskname" placeholder="Task Name" required>
-					</div>
+						</div>
 				</div>
 				<label>Task Description </label>
 				<textarea class="form-control" rows="5" placeholder="Description" name="task_desc"></textarea>
