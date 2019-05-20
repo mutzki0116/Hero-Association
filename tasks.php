@@ -1,7 +1,8 @@
 <?php 
 	include_once 'homepageHeader.php';
 	if (isset($_SESSION['heroID'])) {
-		$taskQuery = "SELECT * FROM heroProfiles WHERE hero_role = 'hero';";
+		$id = $SELECT['heroID'];
+		$taskQuery = "SELECT * FROM hero_tasks WHERE task_to = '".$id."';";
 		$data = selectTask($taskQuery);
 	}
 	
