@@ -3,9 +3,9 @@
 	if (isset($_SESSION['heroID'])) {
 		$id = $_SESSION['heroID'];
 
-		// $taskQuery = "SELECT * FROM hero_tasks WHERE task_to = :id ;";
-		// $data = selectTasks($taskQuery);
-		var_dump($id);
+		$heroQuery = "SELECT * FROM hero_tasks WHERE task_to = '".$id."' ;";
+		$data = selectHeroes($heroQuery);
+		var_dump($data);
 	}
 	else{
 		header("Location: tasks.php?Nouserlogged");
