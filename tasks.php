@@ -3,7 +3,7 @@
 	if (isset($_SESSION['heroID'])) {
 		$id = $SELECT['heroID'];
 		$taskQuery = "SELECT * FROM hero_tasks WHERE task_to = '".$id."';";
-		$data = selectTask($taskQuery);
+		$data = selectTasks($taskQuery);
 	}
 	
 
