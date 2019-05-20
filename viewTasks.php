@@ -1,7 +1,7 @@
 <?php 
 	include_once 'adminHeader.php';
 	if (isset($_SESSION['heroID'])) {
-		$heroQuery = "SELECT * FROM hero_tasks;";
+		$heroQuery = "SELECT task_threat_level,task_to,task_monster,task_city,task_description,task_status FROM hero_tasks;";
 		$data = selectHeroes($heroQuery);
 		
 	}
